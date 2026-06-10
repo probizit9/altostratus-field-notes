@@ -9,6 +9,11 @@ We publish patterns here because the patterns themselves should be in the open. 
 
 ---
 
+**📢 New patterns drop on Telegram first — [t.me/altostratus_ai](https://t.me/altostratus_ai)**
+**🤖 Ask one in any chat — [@altostratus_consult_bot](https://t.me/altostratus_consult_bot) (inline mode)**
+
+---
+
 ## What's in here
 
 | Section | What |
