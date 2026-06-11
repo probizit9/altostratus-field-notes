@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [Kueue PodGroup stuck Pending](../scheduling/kueue-podgroup-stuck-pending.md)
+- [Harbor silent tag prune on quota hit](../registry/harbor-quota-silent-tag-prune.md)
+- [Run:AI quota silently ignored](../runai/runai-quota-ignored.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

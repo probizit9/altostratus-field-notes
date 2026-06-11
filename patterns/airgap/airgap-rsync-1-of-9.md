@@ -43,7 +43,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [Harbor silent tag prune on quota hit](../registry/harbor-quota-silent-tag-prune.md)
+- [OpenShift GPU Operator driver pin](../openshift/openshift-gpu-operator-driver-pin.md)
+- [GPFS token storm on checkpoint](../storage/gpfs-token-storm-on-checkpoint.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [Air-gapped rsync drops 1 image in 9](../airgap/airgap-rsync-1-of-9.md)
+- [Argo Events Sensor never triggers](../platform/argo-events-stuck-trigger.md)
+- [Ceph OSD stalls under training I/O](../storage/ceph-osd-bluestore-rocksdb-stall.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

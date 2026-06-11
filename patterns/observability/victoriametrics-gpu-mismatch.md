@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [DGX H100 PCIe x8 after firmware](../dgx/dgx-bios-h100-pcie-link-degrade.md)
+- [vLLM OOM at TP=3, fits at TP=2/4](../inference/vllm-tp-hbm-saturate.md)
+- [Ceph OSD stalls under training I/O](../storage/ceph-osd-bluestore-rocksdb-stall.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

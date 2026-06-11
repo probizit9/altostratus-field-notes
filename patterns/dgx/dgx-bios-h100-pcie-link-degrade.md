@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [NCCL all-reduce hang at 47%](../nccl/nccl-allreduce-hang-47.md)
+- [OpenShift GPU Operator driver pin](../openshift/openshift-gpu-operator-driver-pin.md)
+- [DCGM metrics ≠ nvidia-smi](../observability/victoriametrics-gpu-mismatch.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

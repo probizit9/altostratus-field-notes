@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [DGX H100 PCIe x8 after firmware](../dgx/dgx-bios-h100-pcie-link-degrade.md)
+- [Slurm GRES GPU undercount](../slurm/slurm-gres-gpu-undercount.md)
+- [Run:AI quota silently ignored](../runai/runai-quota-ignored.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

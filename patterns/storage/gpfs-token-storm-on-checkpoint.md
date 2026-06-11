@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [Ceph OSD stalls under training I/O](../storage/ceph-osd-bluestore-rocksdb-stall.md)
+- [Air-gapped rsync drops 1 image in 9](../airgap/airgap-rsync-1-of-9.md)
+- [Harbor silent tag prune on quota hit](../registry/harbor-quota-silent-tag-prune.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 

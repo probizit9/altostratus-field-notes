@@ -42,7 +42,11 @@ Live 30-minute session: voice + camera + text. Every answer cites the corpus; th
 
 ## Related patterns
 
-Browse the [full pattern index](../../README.md). If a related symptom isn't catalogued yet, [open a PR](../../CONTRIBUTING.md) — contributions welcome.
+- [InfiniBand stale LID after port flap](../fabric/ib-port-flap-stale-lid.md)
+- [RKE2 Cilium MTU drop](../rke2/rke2-cni-mtu-drop.md)
+- [DGX H100 PCIe x8 after firmware](../dgx/dgx-bios-h100-pcie-link-degrade.md)
+
+Or browse the [full pattern index](../../patterns/README.md).
 
 ## Updates
 
