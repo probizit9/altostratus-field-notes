@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managed AI Infrastructure for Travel Tech | GPU & Kubernetes Optimization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin: 30px 0 20px;
+            line-height: 1.2;
+        }
+        .subheadline {
+            font-size: 20px;
+            color: #5f6368;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .pain-section {
+            background: #fef7e0;
+            border-left: 4px solid #f9ab00;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        .pain-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .pain-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .pain-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 17px;
+            color: #3c4043;
+        }
+        .pain-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #d93025;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .solution-section {
+            margin: 40px 0;
+        }
+        .solution-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .deliverables {
+            background: #e8f5e9;
+            border-left: 4px solid #34a853;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .deliverables h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .deliverables ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .deliverables li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 17px;
+            color: #3c4043;
+        }
+        .deliverables li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #34a853;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .trial-offer {
+            background: #e8f0fe;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .trial-offer h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .trial-details {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #3c4043;
+            line-height: 1.8;
+        }
+        .trial-price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a73e8;
+            margin: 20px 0;
+        }
+        .trial-price-note {
+            font-size: 16px;
+            color: #5f6368;
+            margin-bottom: 10px;
+        }
+        .pricing-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .pricing-section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+        .price-comparison {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .price-box {
+            flex: 1;
+            min-width: 280px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+        }
+        .price-box h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #5f6368;
+        }
+        .price-box .amount {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 10px 0;
+        }
+        .price-box .period {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .price-box ul {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #3c4043;
+        }
+        .highlight-box {
+            border-color: #1a73e8;
+            position: relative;
+        }
+        .highlight-box::before {
+            content: "Our Service";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a73e8;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+            padding: 50px 40px;
+            margin: 50px 0;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+        }
+        .cta-section h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .form-group {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            background: #34a853;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-group button:hover {
+            background: #2d8e47;
+        }
+        .guarantee {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .requirements {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .requirements h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .requirements ul {
+            margin-left: 20px;
+            font-size: 16px;
+            color: #3c4043;
+        }
+        .requirements li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #5f6368;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            .subheadline {
+                font-size: 18px;
+            }
+            .pain-section, .deliverables, .trial-offer {
+                padding: 20px;
+            }
+            .price-comparison {
+                flex-direction: column;
+            }
+            .cta-section {
+                padding: 35px 25px;
+            }
+            .trial-price {
+                font-size: 36px;
+            }
+        }
+    </style>
+<meta name="description" content="Managed AI infrastructure service for travel-tech companies"></head>
+<body>
+    <header>
+        <div class="logo">⚡ InfraScale AI</div>
+    </header>
+
+    <div class="container">
+        <h1>Stop Burning $25K+/Month on AI Engineering Hires Your Travel Tech Doesn't Need</h1>
+        <p class="subheadline">Get enterprise-grade AI infrastructure management for a fraction of the cost—without hiring a single engineer</p>
+
+        <div class="pain-section">
+            <h2>The Travel-Tech AI Infrastructure Problem</h2>
+            <p style="margin-bottom: 20px; font-size: 17px;">You're building AI-powered booking optimization, personalized recommendations, or dynamic pricing. But your infrastructure is holding you back:</p>
+            <ul class="pain-list">
+                <li>GPU costs spiraling out of control without clear ROI visibility</li>
+                <li>Your developers are stuck managing Kubernetes instead of shipping features</li>
+                <li>AI model deployments take weeks instead of days</li>
+                <li>You need 2-3 specialized AI infrastructure engineers at $120-180K each (plus equity, benefits, management overhead)</li>
+                <li>Scaling infrastructure for peak travel seasons is a recurring nightmare</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h2>A Better Way: Specialized AI Infrastructure Management</h2>
+            <p style="font-size: 18px; margin: 20px 0; color: #3c4043;">We're a dedicated team that manages AI/GPU infrastructure exclusively for travel-tech companies. You get enterprise-level expertise without the enterprise-level headcount.</p>
+        </div>
+
+        <div class="deliverables">
+            <h3>What You Get</h<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_8" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_8" style="color:#fff">email</a></div>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal AI Implementation Starter Pack - Turn AI Readiness Into Revenue Reality</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 50px;
+        }
+        .eyebrow {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0a0a0a;
+            font-weight: 700;
+        }
+        .subheadline {
+            font-size: 20px;
+            color: #4a4a4a;
+            line-height: 1.4;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .pain-section {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+            border-left: 4px solid #d32f2f;
+        }
+        .pain-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0a0a0a;
+        }
+        .pain-section ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .pain-section li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 17px;
+            color: #2a2a2a;
+        }
+        .pain-section li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            color: #d32f2f;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .solution-section {
+            margin-bottom: 50px;
+        }
+        .solution-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+        }
+        .solution-intro {
+            font-size: 18px;
+            color: #3a3a3a;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+        .deliverables {
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 35px;
+            margin-bottom: 40px;
+        }
+        .deliverables h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #0a0a0a;
+            text-align: center;
+        }
+        .deliverable-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .deliverable-item:last-child {
+            border-bottom: none;
+        }
+        .deliverable-item h4 {
+            font-size: 18px;
+            color: #0066cc;
+            margin-bottom: 8px;
+        }
+        .deliverable-item p {
+            color: #4a4a4a;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .price-section {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: #ffffff;
+            padding: 40px 35px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .price-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        .price {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .price-detail {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .value-note {
+            font-size: 15px;
+            opacity: 0.85;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .cta-section {
+            background: #f8f9fa;
+            padding: 50px 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 40px;
+            border: 2px solid #0066cc;
+        }
+        .cta-section h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+        }
+        .cta-section p {
+            font-size: 17px;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        form {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            color: #2a2a2a;
+        }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            border: 2px solid #d0d0d0;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #0066cc;
+        }
+        button {
+            width: 100%;
+            padding: 18px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            background: #0066cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0052a3;
+        }
+        .guarantee {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+        .about-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .about-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+        }
+        .about-section p {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #808080;
+            font-size: 14px;
+            margin-top: 50px;
+            border-top: 1px solid #e0e0e0;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            .subheadline {
+                font-size: 18px;
+            }
+            .price {
+                font-size: 44px;
+            }
+            .pain-section, .deliverables, .price-section, .cta-section {
+                padding: 30px 20px;
+            }
+            header {
+                padding: 30px 20px 20px;
+            }
+        }
+    </style>
+<meta name="description" content="AI implementation content + training packages for mid-market law firms racing to adopt legal AI"></head>
+<body>
+    <div class="container">
+        <header>
+            <div class="eyebrow">For Mid-Market Law Firm Leaders</div>
+            <h1>Turn Your Firm's AI Initiative From "Strategic Priority" Into Revenue Reality</h1>
+            <p class="subheadline">The Legal AI Implementation Starter Pack: Everything your partners need to understand, adopt, and promote AI capabilities to clients—without the chaos.</p>
+        </header>
+
+        <div class="pain-section">
+            <h2>You've Invested in Legal AI Technology. Now What?</h2>
+            <p style="font-size: 17px; margin-bottom: 10px;">You're facing the gap between having AI capabilities and actually generating ROI from them:</p>
+            <ul>
+                <li>Partners are skeptical or confused about when and how to use AI tools with clients</li>
+                <li>You lack clear implementation frameworks to roll out AI services systematically</li>
+                <li>No one knows how to communicate your AI capabilities to clients without sounding like hype</li>
+                <li>Training materials don't exist, so adoption remains inconsistent across practice groups</li>
+                <li>You're missing the content to position your firm as an AI-forward leader in your market</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h2>Get Your Partners AI-Ready in Days, Not Months</h2>
+            <p class="solution-intro">The <strong>Legal AI Implementation Starter Pack</strong> is a ready-to-use toolkit designed specifically for mid-market firms racing to implement legal AI successfully. You get the frameworks, training content, and communication templates to drive partner adoption and client conversations immediately.</p>
+
+            <div class="deliverables">
+                <h3>What's Included in Your Starter Pack</h3>
+                
+                <div class="deliverable-item">
+                    <h4>15-Page Implementation Guide</h4>
+                    <p>A practical roadmap covering AI use case identification, risk assessment frameworks, client communication protocols, and phased rollout strategies tailored to mid-market law firms. No theoretical fluff—just actionable steps your management team can execute this month.</p>
+                </div>
+
+                <div class="deliverable-item">
+                    <h4>3 Partner Training Video Scripts</h4>
+                    <p>Ready-to-record scripts covering: (1) "AI Fundamentals for Legal Practice" (8 min), (2) "Identifying Client Opportunities for AI" (6 min), and (3) "Addressing Client Concerns About AI" (7 min). Record these internally or<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_7" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_7" style="color:#fff">email</a></div>
