@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Undercharging for Your Influence | Creator Pricing Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #5a67d8;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            color: #1a202c;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .subheadline {
+            font-size: 20px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .hero-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        .pain-points {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .pain-points h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #742a2a;
+        }
+        .pain-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pain-points li {
+            padding: 8px 0;
+            color: #742a2a;
+            position: relative;
+            padding-left: 28px;
+        }
+        .pain-points li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #e53e3e;
+        }
+        .solution {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        .solution h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a202c;
+        }
+        .features {
+            list-style: none;
+            margin: 25px 0;
+        }
+        .features li {
+            padding: 12px 0;
+            position: relative;
+            padding-left: 32px;
+            font-size: 17px;
+        }
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .product-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 35px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .product-box h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        .product-box .description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        .price-note {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        .cta-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #1a202c;
+        }
+        .cta-section p {
+            font-size: 17px;
+            color: #4a5568;
+            margin-bottom: 25px;
+        }
+        .email-form {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #5a67d8;
+        }
+        .cta-button {
+            width: 100%;
+            background: #5a67d8;
+            color: white;
+            border: none;
+            padding: 18px 32px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #4c51bf;
+        }
+        .trust-note {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 15px;
+        }
+        .social-proof {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .social-proof p {
+            font-size: 15px;
+            color: #4a5568;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #718096;
+            font-size: 14px;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 28px;
+            }
+            .subheadline {
+                font-size: 18px;
+            }
+            .hero-section, .solution, .cta-section {
+                padding: 30px 20px;
+            }
+            .price {
+                font-size: 38px;
+            }
+            .product-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+<meta name="description" content="AI-powered dynamic pricing SaaS for creator-brand partnerships"></head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">PricingPro</div>
+        </header>
+
+        <div class="hero-section">
+            <h1>Stop Undercharging for Your Brand Partnerships</h1>
+            <p class="subheadline">Finally know what to charge brands with confidence—backed by real data, not guesswork.</p>
+        </div>
+
+        <div class="pain-points">
+            <h2>If you're a creator, you know this struggle:</h2>
+            <ul>
+                <li>You have no idea if you're charging too little (or scaring brands away by asking too much)</li>
+                <li>Every negotiation feels like you're pulling numbers out of thin air</li>
+                <li>You see other creators landing deals and wonder what they're actually charging</li>
+                <li>Brands push back on your rates and you have no data to defend your pricing</li>
+                <li>You're leaving money on the table but don't know how much</li>
+            </ul>
+        </div>
+
+        <div class="solution">
+            <h2>Introducing: The Creator Pricing Calculator</h2>
+            <p style="font-size: 17px; margin-bottom: 20px;">A straightforward spreadsheet tool that gives you data-driven pricing recommendations for your sponsored content—based on your actual metrics.</p>
+            
+            <ul class="features">
+                <li><strong>Instant pricing estimates</strong> based on your follower count, engagement rate, and niche</li>
+                <li><strong>Real market benchmarks</strong> from actual creator-brand deals across industries</li>
+                <li><strong>Multiple content format pricing</strong> (Instagram posts, Stories, Reels, YouTube integrations, etc.)</li>
+                <li><strong>Simple calculator interface</strong>—just plug in your numbers and get your rate range</li>
+                <li><strong>Negotiation confidence</strong>—walk into every brand conversation with data backing you up</li>
+            </ul>
+        </div>
+
+        <div class="product-box">
+            <h3>Get the Creator Pricing Calculator</h3>
+            <p class="description">A downloadable spreadsheet tool you can use immediately to calculate fair, competitive rates for your brand partnerships.</p>
+            <div class="price">$29</div>
+            <p class="price-note">One-time payment. Instant download. Yours to keep and use forever.</p>
+        </div>
+
+        <div class="social-proof">
+            <p>"I've been creating content for 3 years and always guessed at my rates. Having actual benchmarks changed everything—I increased my average deal value by 40% just by knowing what to ask for."</p>
+            <p style="margin-top: 10px; font-style: normal; font-weight: 600;">— Maya T., Lifestyle Creator (68K followers)</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>Get Early Access + Launch Discount</h2>
+            <p>Join the waitlist and be the first to know when the Creator Pricing Calculator launches. Early subscribers get <strong>$10 off</strong> the regular price.</p>
+            
+            <form class="email-form" action="/capture" method="post">
+                <input type="hidden" name="exp" value="5">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="cta-button">Notify Me at Launch</button>
+                <p class="trust-note">No spam. Unsubscribe anytime. We respect your inbox.</p>
+            </form>
+        </div>
+
+        <footer>
+            <p>© 2024 PricingPro. Built for creators who want to be paid what they're worth.</p>
+        </footer>
+    </div>
+<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_5" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_5" style="color:#fff">email</a></div></body>
+</html>

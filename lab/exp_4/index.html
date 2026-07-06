@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Label AI Screening for Recruitment Agencies | Free 3-Week Pilot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: -20px -20px 40px -20px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .subheadline {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #1a202c;
+        }
+        .pain-points {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 24px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+        .pain-points ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+        .pain-points li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: #742a2a;
+        }
+        .pain-points li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #fc8181;
+        }
+        .solution {
+            background: #f0fff4;
+            border-left: 4px solid #68d391;
+            padding: 24px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+        .solution ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+        .solution li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: #22543d;
+        }
+        .solution li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #68d391;
+            font-size: 1.2rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .feature-card {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #2d3748;
+        }
+        .feature-card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        .pricing-box {
+            background: #edf2f7;
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin: 32px 0;
+        }
+        .pricing-box .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 16px 0;
+        }
+        .pricing-box .term {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 16px;
+        }
+        .pilot-offer {
+            background: #fffbeb;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 28px;
+            margin: 32px 0;
+        }
+        .pilot-offer h2 {
+            color: #92400e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .pilot-offer .highlight {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .pilot-offer strong {
+            color: #92400e;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 32px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+        .cta-box p {
+            font-size: 1.05rem;
+            margin-bottom: 28px;
+            opacity: 0.95;
+        }
+        form {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background: white;
+            color: #667eea;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .trust-note {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.85);
+            margin-top: 16px;
+        }
+        .commitment {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+            border-left: 4px solid #667eea;
+        }
+        .commitment h3 {
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #718096;
+            font-size: 0.875rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .subheadline {
+                font-size: 1.3rem;
+            }
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+            .container {
+                padding: 40px;
+            }
+        }
+    </style>
+<meta name="description" content="White-label AI candidate screening + engagement infrastructure for recruitment agencies"></head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">For Israeli Recruitment Agencies</div>
+            <h1>Stop Manually Screening Every Candidate</h1>
+            <p class="subheadline">White-label AI screening infrastructure that handles first-contact, qualification, and follow-ups—under your brand</p>
+        </header>
+
+        <section class="section">
+            <div class="pain-points">
+                <h2>You're Drowning in First-Contact Work</h2>
+                <ul>
+                    <li>Recruiters spend 10-15 hours/week on initial candidate screening calls</li>
+                    <li>Manual follow-ups mean qualified candidates slip through the cracks</li>
+                    <li>Can't screen candidates outside business hours or in multiple languages</li>
+                    <li>Growth is limited by how many recruiters you can hire and train</li>
+                </ul>
+            </div>
+
+            <div class="solution">
+                <h2>What You Get: Your Own AI Screening System</h2>
+                <ul>
+                    <li>Voice + text AI that pre-screens candidates 24/7 under YOUR brand</li>
+                    <li>Automated follow-ups and re-engagement sequences</li>
+                    <li>Multi-language support (Hebrew, English, Russian, Arabic, Amharic)</li>
+                    <li>Qualified candidates routed directly to your recruiters with full transcripts</li>
+                    <li>Complete white-label: looks and sounds like your agency built it</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>How It Works</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>📞 Voice Screening</h3>
+                    <p>AI calls candidates, asks your qualifying questions, handles objections naturally in their language</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💬 Text Engagement</h3>
+                    <p>WhatsApp and SMS follow-ups, appointment scheduling, document collection—all automated</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Smart Routing</h3>
+                    <p>Qualified candidates automatically scheduled with the right recruiter, with complete screening notes</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏷️ Your Brand</h3>
+                    <p>Complete white-label solution—candidates only see your agency name and branding</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="pilot-offer">
+                <h2>🎁 Free 3-Week Pilot Program</h2>
+                <div<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_4" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_4" style="color:#fff">email</a></div>

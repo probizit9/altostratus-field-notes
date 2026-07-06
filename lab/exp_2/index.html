@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managed AI Infrastructure for AgTech Companies | White-Label GPU & Kubernetes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c25 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        .pain-section {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .pain-section h2 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .pain-section ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .pain-section li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .pain-section li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .solution-section {
+            background: white;
+            padding: 50px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .solution-section h2 {
+            color: #2d5016;
+            margin-bottom: 25px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .feature {
+            padding: 25px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            background: #f8fdf5;
+        }
+        .feature h3 {
+            color: #2d5016;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .feature p {
+            color: #4a5568;
+            font-size: 0.95em;
+        }
+        .pricing-section {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            border: 2px solid #4a7c25;
+        }
+        .pricing-section h2 {
+            text-align: center;
+            color: #2d5016;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .price-box {
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        }
+        .price-box h3 {
+            color: #2d5016;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4a7c25;
+            margin: 15px 0;
+        }
+        .price-note {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #4a7c25 0%, #2d5016 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        .cta-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .offer-box {
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .offer-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .offer-box ul {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .offer-box li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .offer-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #90ee90;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            background: white;
+            color: #2d3748;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4a7c25;
+        }
+        button {
+            width: 100%;
+            padding: 18px 40px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: white;
+            background: #ff6b35;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+        }
+        button:hover {
+            background: #e85a2a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.5);
+        }
+        .trust-section {
+            background: white;
+            padding: 40px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        .trust-section h2 {
+            text-align: center;
+            color: #2d5016;
+            margin-bottom: 30px;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .trust-item {
+            padding: 20px;
+        }
+        .trust-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4a7c25;
+            margin-bottom: 10px;
+        }
+        .trust-label {
+            color: #6c757d;
+            font-size: 1em;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .subtitle {
+                font-size: 1.1em;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-section h2 {
+                font-size: 1.6em;
+            }
+            .cta-section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+<meta name="description" content="White-label AI infrastructure-as-a-service for AgTech companies"></head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stop Wrestling With AI Infrastructure. Start Shipping Models.</h1>
+            <p class="subtitle">White-label managed GPU & Kubernetes infrastructure built specifically for AgTech AI workloads</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="pain-section">
+            <h2>Your AI models work. Your infrastructure doesn't.</h2>
+            <p>You're an AgTech company building game-changing AI for yield prediction, disease detection, or crop monitoring. But instead of improving your models, your team is:</p>
+            <ul>
+                <li>Burning engineering hours debugging Kubernetes configs and GPU drivers</li>
+                <li>Overpaying for cloud resources because you can't optimize utilization at scale</li>
+                <li>Missing customer demos because training jobs crash or inference APIs go down</li>
+                <li>Struggling to scale from 10 to 1,000 customers without rewriting everything</li>
+                <li>Watching competitors ship faster because they're not distracted by DevOps</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h2>We Run Your AI Infrastructure. You Focus on Agriculture.</h2>
+            <p style="text-align: center; font-size: 1.1em; color: #4a5568; margin-bottom: 30px;">White-label managed infrastructure that your customers never see — they just experience fast, reliable AI.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>🚀 Managed GPU Clusters</h3>
+                    <p>Pre-configured NVIDIA GPU instances optimized for PyTorch, TensorFlow, and computer vision workloads. Auto-scaling from 1 to 100+ GPUs based on demand.</p><div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_2" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_2" style="color:#fff">email</a></div>
