@@ -1,325 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White-Label AI Screening for Recruitment Agencies | Free 3-Week Pilot</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #ffffff;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            margin: -20px -20px 40px -20px;
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-        .subheadline {
-            font-size: 1.15rem;
-            opacity: 0.95;
-            font-weight: 400;
-        }
-        .badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.25);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-            color: #1a202c;
-        }
-        .pain-points {
-            background: #fff5f5;
-            border-left: 4px solid #fc8181;
-            padding: 24px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-        .pain-points ul {
-            list-style: none;
-            margin-top: 12px;
-        }
-        .pain-points li {
-            padding: 8px 0 8px 28px;
-            position: relative;
-            color: #742a2a;
-        }
-        .pain-points li:before {
-            content: "✗";
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            color: #fc8181;
-        }
-        .solution {
-            background: #f0fff4;
-            border-left: 4px solid #68d391;
-            padding: 24px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-        .solution ul {
-            list-style: none;
-            margin-top: 12px;
-        }
-        .solution li {
-            padding: 8px 0 8px 28px;
-            position: relative;
-            color: #22543d;
-        }
-        .solution li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            color: #68d391;
-            font-size: 1.2rem;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-            margin: 24px 0;
-        }
-        .feature-card {
-            background: #f7fafc;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-        }
-        .feature-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #2d3748;
-        }
-        .feature-card p {
-            color: #4a5568;
-            font-size: 0.95rem;
-        }
-        .pricing-box {
-            background: #edf2f7;
-            border: 2px solid #667eea;
-            border-radius: 12px;
-            padding: 32px;
-            text-align: center;
-            margin: 32px 0;
-        }
-        .pricing-box .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 16px 0;
-        }
-        .pricing-box .term {
-            font-size: 1rem;
-            color: #4a5568;
-            margin-bottom: 16px;
-        }
-        .pilot-offer {
-            background: #fffbeb;
-            border: 2px solid #f59e0b;
-            border-radius: 12px;
-            padding: 28px;
-            margin: 32px 0;
-        }
-        .pilot-offer h2 {
-            color: #92400e;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .pilot-offer .highlight {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 16px 0;
-        }
-        .pilot-offer strong {
-            color: #92400e;
-        }
-        .cta-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px 32px;
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta-box h2 {
-            color: white;
-            margin-bottom: 12px;
-        }
-        .cta-box p {
-            font-size: 1.05rem;
-            margin-bottom: 28px;
-            opacity: 0.95;
-        }
-        form {
-            max-width: 420px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 16px;
-            text-align: left;
-        }
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-        input[type="email"],
-        input[type="text"] {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        input[type="email"]:focus,
-        input[type="text"]:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        button[type="submit"] {
-            width: 100%;
-            background: white;
-            color: #667eea;
-            padding: 16px 32px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin-top: 8px;
-        }
-        button[type="submit"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-        .trust-note {
-            font-size: 0.875rem;
-            color: rgba(255,255,255,0.85);
-            margin-top: 16px;
-        }
-        .commitment {
-            background: white;
-            padding: 24px;
-            border-radius: 8px;
-            margin: 24px 0;
-            border-left: 4px solid #667eea;
-        }
-        .commitment h3 {
-            color: #2d3748;
-            margin-bottom: 12px;
-        }
-        footer {
-            text-align: center;
-            padding: 32px 20px;
-            color: #718096;
-            font-size: 0.875rem;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 60px;
-        }
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            .subheadline {
-                font-size: 1.3rem;
-            }
-            .features {
-                grid-template-columns: 1fr 1fr;
-            }
-            .container {
-                padding: 40px;
-            }
-        }
-    </style>
-<meta name="description" content="White-label AI candidate screening + engagement infrastructure for recruitment agencies"></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best HR Recruiting Software for Agencies: White-Label AI Screening Solutions</title>
+<meta name="description" content="Discover the best rated HR recruiting software for agencies. White-label AI candidate screening with voice+text engagement, automated follow-ups, and multi-language support. $1-3K/month licensing.">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+background: #0a0a0a;
+color: #e0e0e0;
+line-height: 1.6;
+padding: 20px;
+}
+.container {
+max-width: 800px;
+margin: 0 auto;
+}
+header {
+margin-bottom: 48px;
+padding-top: 32px;
+}
+h1 {
+font-size: 2rem;
+line-height: 1.3;
+margin-bottom: 24px;
+color: #ffffff;
+font-weight: 700;
+}
+h2 {
+font-size: 1.5rem;
+margin: 48px 0 24px;
+color: #ffffff;
+font-weight: 600;
+}
+h3 {
+font-size: 1.25rem;
+margin: 32px 0 16px;
+color: #00AFA9;
+font-weight: 600;
+}
+p {
+margin-bottom: 16px;
+font-size: 1.05rem;
+color: #c0c0c0;
+}
+ul, ol {
+margin: 16px 0 16px 24px;
+color: #c0c0c0;
+}
+li {
+margin-bottom: 12px;
+font-size: 1.05rem;
+}
+.accent {
+color: #00AFA9;
+}
+.offer-section {
+background: #151515;
+border: 2px solid #00AFA9;
+border-radius: 12px;
+padding: 32px;
+margin: 48px 0;
+}
+.price {
+font-size: 2rem;
+color: #00AFA9;
+font-weight: 700;
+margin: 16px 0;
+}
+.cta {
+display: inline-block;
+background: #00AFA9;
+color: #0a0a0a;
+padding: 16px 32px;
+text-decoration: none;
+border-radius: 8px;
+font-weight: 600;
+font-size: 1.1rem;
+margin-top: 16px;
+transition: background 0.3s ease;
+}
+.cta:hover {
+background: #00c9c0;
+}
+.faq-item {
+background: #151515;
+padding: 24px;
+margin-bottom: 24px;
+border-radius: 8px;
+border-left: 4px solid #00AFA9;
+}
+.faq-question {
+font-size: 1.2rem;
+color: #ffffff;
+font-weight: 600;
+margin-bottom: 12px;
+}
+.faq-answer {
+color: #c0c0c0;
+}
+.comparison-table {
+width: 100%;
+border-collapse: collapse;
+margin: 24px 0;
+background: #151515;
+border-radius: 8px;
+overflow: hidden;
+}
+.comparison-table th,
+.comparison-table td {
+padding: 16px;
+text-align: left;
+border-bottom: 1px solid #2a2a2a;
+}
+.comparison-table th {
+background: #1a1a1a;
+color: #00AFA9;
+font-weight: 600;
+}
+.comparison-table td {
+color: #c0c0c0;
+}
+@media (max-width: 640px) {
+body {
+padding: 16px;
+}
+h1 {
+font-size: 1.5rem;
+}
+h2 {
+font-size: 1.25rem;
+}
+.offer-section {
+padding: 24px;
+}
+.price {
+font-size: 1.5rem;
+}
+.comparison-table th,
+.comparison-table td {
+padding: 12px 8px;
+font-size: 0.9rem;
+}
+}
+</style>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is the best HR recruiting software for small to mid-sized agencies?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The best HR recruiting software for agencies combines automated candidate screening, engagement tools, and application tracking in a white-label solution. Key features include voice and text candidate engagement, automated follow-ups, multi-language support, and seamless integration with existing recruitment workflows. White-label solutions allow agencies to brand the technology as their own while avoiding the $500K-$2M development costs of building in-house systems."
+}
+},
+{
+"@type": "Question",
+"name": "What is the difference between recruiting vs HR?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Recruiting focuses specifically on sourcing, screening, and hiring candidates to fill open positions. HR (Human Resources) is broader, encompassing recruiting plus employee onboarding, benefits administration, performance management, compliance, and employee relations throughout the employment lifecycle. Recruiting is a subset of HR functions, often handled by specialized recruitment agencies or dedicated talent acquisition teams."
+}
+},
+{
+"@type": "Question",
+"name": "How much does HR recruiting software cost for agencies?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "HR recruiting software for agencies typically ranges from $99-$500/month for basic applicant tracking systems to $1,000-$10,000+/month for enterprise solutions. White-label AI-powered screening systems with voice and text engagement typically license for $1,000-$3,000/month per agency, providing advanced automation without the need for agencies to build their own technology infrastructure."
+}
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Article",
+"headline": "Best HR Recruiting Software for Agencies: White-Label AI Screening Solutions",
+"description": "Comprehensive guide to HR recruiting software options for recruitment agencies, including white-label AI candidate screening infrastructure, pricing models, and key features.",
+"author": {
+"@type": "Organization",
+"name": "Altostratus Consulting"
+},
+"datePublished": "2025-01-15",
+"dateModified": "2025-01-15"
+}
+</script>
+</head>
 <body>
-    <div class="container">
-        <header>
-            <div class="badge">For Israeli Recruitment Agencies</div>
-            <h1>Stop Manually Screening Every Candidate</h1>
-            <p class="subheadline">White-label AI screening infrastructure that handles first-contact, qualification, and follow-ups—under your brand</p>
-        </header>
+<div class="container">
+<header>
+<h1>What Is the Best HR Recruiting Software for Agencies?</h1>
+<p>If you run a recruitment agency or HR firm, you're likely asking yourself how to screen more candidates faster without sacrificing quality. The right HR recruiting software can transform your agency's capacity, but choosing between building, buying, or licensing technology is challenging.</p>
+</header>
 
-        <section class="section">
-            <div class="pain-points">
-                <h2>You're Drowning in First-Contact Work</h2>
-                <ul>
-                    <li>Recruiters spend 10-15 hours/week on initial candidate screening calls</li>
-                    <li>Manual follow-ups mean qualified candidates slip through the cracks</li>
-                    <li>Can't screen candidates outside business hours or in multiple languages</li>
-                    <li>Growth is limited by how many recruiters you can hire and train</li>
-                </ul>
-            </div>
+<main>
+<section>
+<h2>Understanding HR Recruiting Software Options</h2>
+<p>HR recruiting software encompasses tools that help agencies and HR departments source, screen, track, and engage candidates. The market includes several categories:</p>
+<ul>
+<li><strong>Applicant Tracking Systems (ATS):</strong> Organize candidate pipelines and job postings</li>
+<li><strong>Candidate Screening Tools:</strong> Automate resume parsing, skills assessment, and initial interviews</li>
+<li><strong>Engagement Platforms:</strong> Manage communication via email, SMS, and voice</li>
+<li><strong>White-Label Solutions:</strong> Technology you can rebrand as your own service</li>
+</ul>
+<p>Most recruiting agencies need a combination of these capabilities, which is why integrated platforms have become increasingly popular.</p>
+</section>
 
-            <div class="solution">
-                <h2>What You Get: Your Own AI Screening System</h2>
-                <ul>
-                    <li>Voice + text AI that pre-screens candidates 24/7 under YOUR brand</li>
-                    <li>Automated follow-ups and re-engagement sequences</li>
-                    <li>Multi-language support (Hebrew, English, Russian, Arabic, Amharic)</li>
-                    <li>Qualified candidates routed directly to your recruiters with full transcripts</li>
-                    <li>Complete white-label: looks and sounds like your agency built it</li>
-                </ul>
-            </div>
-        </section>
+<section>
+<h2>Key Features of Best Rated HR Recruiting Software</h2>
+<p>When evaluating HR recruiting systems for your agency, prioritize these proven capabilities:</p>
 
-        <section class="section">
-            <h2>How It Works</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <h3>📞 Voice Screening</h3>
-                    <p>AI calls candidates, asks your qualifying questions, handles objections naturally in their language</p>
-                </div>
-                <div class="feature-card">
-                    <h3>💬 Text Engagement</h3>
-                    <p>WhatsApp and SMS follow-ups, appointment scheduling, document collection—all automated</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🎯 Smart Routing</h3>
-                    <p>Qualified candidates automatically scheduled with the right recruiter, with complete screening notes</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🏷️ Your Brand</h3>
-                    <p>Complete white-label solution—candidates only see your agency name and branding</p>
-                </div>
-            </div>
-        </section>
+<h3>Automated Candidate Screening</h3>
+<p>Modern AI-powered screening systems can conduct initial candidate interviews via voice and text, asking qualifying questions, assessing responses, and scoring candidates automatically. This reduces time-to-screen from days to hours while improving consistency.</p>
 
-        <section class="section">
-            <div class="pilot-offer">
-                <h2>🎁 Free 3-Week Pilot Program</h2>
-                <div<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_4" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_4" style="color:#fff">email</a></div>
+<h3>Multi-Channel Engagement</h3>
+<p>The best recruiting software engages candidates where they are—SMS for quick responses, email for detailed information, and voice for personal connection. Automated follow-ups ensure no candidate falls through the cracks.</p>
+
+<h3>Multi-Language Support</h3>
+<p>For agencies serving diverse markets or international clients, multi-language capability is essential. AI systems can now conduct screening conversations in dozens of languages without requiring multilingual staff.</p>
+
+<h3>Application Tracking Integration</h3>
+<p>Your recruiting software should integrate seamlessly with existing ATS systems, CRMs, and job boards. Look for solutions with open APIs and pre-built integrations with major platforms.</p>
+
+<h3>White-Label Capability</h3>
+<p>For agencies, white-label solutions allow you to offer advanced technology under your own brand, creating competitive differentiation without massive development investment.</p>
+</section>
+
+<section>
+<h2>Recruiting vs HR: Understanding the Distinction</h2>
+<p>Many people search for "recruiting vs HR" to understand how these functions differ:</p>
+<p><strong>Recruiting</strong> is the process of finding, attracting, screening, and hiring candidates for open positions. It's project-based, focused on filling specific roles, and often handled by specialized recruitment agencies or internal talent acquisition teams.</p>
+<p><strong>HR (Human Resources)</strong> encompasses recruiting plus the entire employee lifecycle: onboarding, training, compensation, benefits, performance management, employee relations, and offboarding. HR is strategic and ongoing.</p>
+<p>Recruitment agencies typically focus exclusively on the recruiting function, serving multiple client companies. This specialization allows them to develop deep expertise in candidate sourcing and screening for specific industries or roles.</p>
+</section>
+
+<section>
+<h2>Economics of HR Recruiting Software for Agencies</h2>
+<p>Understanding the cost structure helps agencies make informed decisions:</p>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Solution Type</th>
+<th>Typical Cost</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic ATS</td>
+<td>$99-$500/month</td>
+<td>Solo recruiters, small agencies</td>
+</tr>
+<tr>
+<td>Mid-Tier Platforms</td>
+<td>$500-$2,000/month</td>
+<td>Growing agencies (5-20 recruiters)</td>
+</tr>
+<tr>
+<td>White-Label AI Screening</td>
+<td>$1,000-$3,000/month</td>
+<td>Agencies wanting competitive differentiation</td>
+</tr>
+<tr>
+<td>Enterprise Custom Build</td>
+<td>$500K-$2M+ upfront</td>
+<td>Large staffing firms (100+ recruiters)</td>
+</tr>
+</tbody>
+</table>
+
+<p>For small-to-mid recruitment agencies (3-30 recruiters), white-label licensing offers the best economics: enterprise-grade technology at predictable monthly costs without development risk or ongoing maintenance burden.</p>
+</section>
+
+<section>
+<h2>White-Label AI Screening Infrastructure</h2>
+<p>White-label solutions have emerged as the practical middle ground for recruitment agencies that want advanced technology without building it themselves.</p>
+<p>A white-label
