@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Content Studio for Fintech | Stop Losing Deals to Poor Social Presence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .subheadline {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .market-stat {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        section {
+            padding: 50px 0;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #2d3748;
+            text-align: center;
+        }
+        
+        .pain-section {
+            background: #fff5f5;
+            padding: 40px;
+            border-left: 4px solid #fc8181;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .pain-section h3 {
+            color: #c53030;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .pain-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .pain-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            font-size: 1.05em;
+            color: #4a5568;
+        }
+        
+        .pain-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #fc8181;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .solution-section {
+            background: #f0fff4;
+            padding: 40px;
+            border-left: 4px solid #68d391;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .solution-section h3 {
+            color: #22543d;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .deliverables {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .deliverables li {
+            padding: 15px 0 15px 40px;
+            position: relative;
+            font-size: 1.05em;
+            color: #2d3748;
+            border-bottom: 1px solid #c6f6d5;
+        }
+        
+        .deliverables li:last-child {
+            border-bottom: none;
+        }
+        
+        .deliverables li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #38a169;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        
+        .deliverables strong {
+            color: #22543d;
+        }
+        
+        .pricing-box {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+        }
+        
+        .price-tag {
+            font-size: 3em;
+            font-weight: 700;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        
+        .price-subtitle {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .price-note {
+            font-size: 0.95em;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .trial-offer {
+            background: #fffbeb;
+            border: 2px dashed #f6ad55;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .trial-offer strong {
+            color: #c05621;
+            font-size: 1.15em;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .cta-description {
+            font-size: 1.1em;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            background: white;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: 3px solid #fbd38d;
+        }
+        
+        button {
+            width: 100%;
+            padding: 18px 40px;
+            background: #f6ad55;
+            color: #1a1a1a;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #ed8936;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(246, 173, 85, 0.4);
+        }
+        
+        .guarantee {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .how-it-works {
+            background: #edf2f7;
+            padding: 50px 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .steps {
+            display: grid;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .step {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 55px);
+        }
+        
+        .step-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .step-description {
+            color: #4a5568;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .subheadline {
+                font-size: 1.1em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .pain-section,
+            .solution-section {
+                padding: 25px;
+            }
+            
+            .pricing-box {
+                padding: 30px 20px;
+            }
+            
+            .price-tag {
+                font-size: 2.5em;
+            }
+            
+            .cta-section {
+                padding: 40px 25px;
+            }
+        }
+    </style>
+<meta name="description" content="AI-powered fintech content studio serving the $23B AI-in-fintech market"></head>
+<body>
+    <header>
+        <h1>Your Fintech Startup Is Invisible Without Consistent, Expert Content</h1>
+        <p class="subheadline">AI-powered content studio creating thought leadership that positions your fintech brand in the $23B AI-in-fintech market</p>
+        <div class="market-stat">Market opportunity: $23B and growing 🚀</div>
+    </header>
+
+    <div class="container">
+        <section>
+            <div class="pain-section">
+                <h3>Your competitors are out-posting you. Here's what poor content frequency costs:</h3>
+                <ul class="pain-list">
+                    <li>Investors scroll past your profile—no recent activity signals stagnation</li>
+                    <li>Potential customers choose competitors who "show up" daily with insights</li>
+                    <li>Top talent joins companies with visible thought leaders, not ghost accounts</li>
+                    <li>Partnership opportunities go to fintechs demonstrating market expertise</li>
+                    <li>Your team wastes hours trying to write posts that never get published</li>
+                </ul>
+            </div>
+
+            <h2>What You Actually Need (And What We Deliver)</h2>
+            
+            <div class="solution-section"><div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_12" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_12" style="color:#fff">email</a></div>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalContent AI - Automated Marketing Content for Law Firms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            margin: -20px -20px 40px -20px;
+        }
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .subheadline {
+            font-size: 1.25em;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+        .pain-points {
+            background: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .pain-points ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .pain-points li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+        }
+        .pain-points li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .solution {
+            background: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .deliverables {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .deliverable-item {
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        .deliverable-item:hover {
+            border-color: #2a5298;
+        }
+        .deliverable-item h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .deliverable-item p {
+            color: #555;
+            line-height: 1.7;
+        }
+        .pricing-box {
+            background: #1e3c72;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .pricing-box .price {
+            font-size: 3em;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        .pricing-box .price-detail {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .pricing-box ul {
+            text-align: left;
+            list-style: none;
+            margin: 30px auto;
+            max-width: 400px;
+        }
+        .pricing-box li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .pricing-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        .trial-offer {
+            background: #fff3cd;
+            border: 3px solid #ffc107;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .trial-offer h2 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        .trial-offer p {
+            font-size: 1.15em;
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        .trial-offer .highlight {
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        .cta-section {
+            background: #f8f9fa;
+            padding: 50px 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 40px 0;
+            border: 2px solid #2a5298;
+        }
+        .cta-section h2 {
+            margin-bottom: 15px;
+        }
+        .cta-section p {
+            font-size: 1.15em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .form-group {
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        .form-group input[type="email"]:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+            background: #27ae60;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-group button:hover {
+            background: #229954;
+        }
+        .guarantee {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95em;
+            color: #666;
+        }
+        .faq {
+            margin-top: 50px;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .faq-item h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .faq-item p {
+            color: #555;
+            line-height: 1.7;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.6em;
+            }
+            .subheadline {
+                font-size: 1.1em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            .pricing-box .price {
+                font-size: 2.2em;
+            }
+            .header {
+                padding: 40px 20px 30px;
+            }
+        }
+    </style>
+<meta name="description" content="AI-powered legal content generation & distribution service for solo/small law firms struggling with marketing"></head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Stop Losing Clients to Law Firms with Better Online Presence</h1>
+            <p class="subheadline">AI-Powered Legal Content That Builds Your Authority & Attracts Clients—Without the Time or Expense</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pain-points">
+            <h2>You Know You Need Content Marketing, But...</h2>
+            <ul>
+                <li>You don't have time to write blog posts between client meetings and court dates</li>
+                <li>Hiring a marketing agency costs $3,000-5,000/month—money you can't justify yet</li>
+                <li>Your website hasn't been updated in months (or years), making you invisible to Google</li>
+                <li>Potential clients are finding your competitors on LinkedIn and social media instead of you</li>
+                <li>You know content marketing works, but creating quality legal content feels overwhelming</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Introducing LegalContent AI</h2>
+            <p style="font-size: 1.15em; line-height: 1.8; color: #555;">We create professionally-written, AI-powered legal content specifically for solo attorneys and small law firms. Get a consistent flow of blog posts, LinkedIn articles, social media content, and educational materials—all tailored to your practice areas and designed to attract clients.</p>
+        </div>
+
+        <div class="solution">
+            <h2 style="color: #27ae60;">What You Get Every Month</h2>
+            <div class="deliverables">
+                <div class="deliverable-item">
+                    <h3>📝 4 SEO-Optimized Blog Posts</h3>
+                    <p>Well-researched 800-1,200 word articles on legal topics relevant to your practice. Each post is designed to rank in search engines and establish your expertise.</p>
+                </div>
+                <div class="deliverable-item">
+                    <h3>💼 8 LinkedIn Articles & Posts</h3>
+                    <p>Professionally-written content for your LinkedIn profile that positions you as a thought leader and keeps you visible to potential clients and referral sources.</p>
+                </div>
+                <div class="deliverable-item">
+                    <h3>📱 12 Social Media Posts</h3>
+                    <p>Ready-to-publish content for Facebook, Instagram, and Twitter that educates your audience and drives engagement.</p>
+                </div>
+                <div class="deliverable-item">
+                    <h3>🎥 4 Educational Reel Scripts</h3>
+                    <p>Short-form video scripts (30-60 seconds) explaining common legal questions in your practice area—perfect for Instagram Reels, TikTok, and YouTube Shorts.</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-size: 1.05em;"><strong>All content is:</strong> Fact-checked for legal accuracy • Customized to your practice areas • Ready to publish with minimal editing • Delivered on a consistent schedule</p>
+        </div>
+
+        <div class="trial-offer">
+            <h2>🎁 Limited Time: Try Before You Buy</h2><div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_14" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_14" style="color:#fff">email</a></div>
