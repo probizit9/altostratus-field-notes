@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropTech Content Syndication | AI-Powered Thought Leadership for Real Estate Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 60px 20px 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .hero .subheadline {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+        
+        .hero .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        
+        .pain-section {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+            padding: 40px 20px;
+            margin: -40px 20px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .pain-section .container {
+            max-width: 900px;
+        }
+        
+        .pain-section h2 {
+            font-size: 1.5rem;
+            color: #991b1b;
+            margin-bottom: 20px;
+        }
+        
+        .pain-list {
+            list-style: none;
+            margin-bottom: 0;
+        }
+        
+        .pain-list li {
+            padding: 12px 0 12px 32px;
+            position: relative;
+            font-size: 1.05rem;
+            color: #7f1d1d;
+        }
+        
+        .pain-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .solution-section {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+        
+        .solution-section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #0f172a;
+        }
+        
+        .deliverables {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+        
+        .deliverable-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .deliverable-card:hover {
+            border-color: #60a5fa;
+            box-shadow: 0 8px 24px rgba(96, 165, 250, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .deliverable-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+        
+        .deliverable-card ul {
+            list-style: none;
+        }
+        
+        .deliverable-card li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: #475569;
+        }
+        
+        .deliverable-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .sample-section {
+            background: #f1f5f9;
+            padding: 60px 20px;
+        }
+        
+        .sample-section h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+        
+        .sample-intro {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+        
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .sample-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .sample-card .persona {
+            font-size: 0.85rem;
+            color: #60a5fa;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        
+        .sample-card .content-preview {
+            font-size: 0.95rem;
+            color: #334155;
+            font-style: italic;
+            line-height: 1.6;
+            border-left: 3px solid #e2e8f0;
+            padding-left: 16px;
+        }
+        
+        .pricing-section {
+            padding: 80px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+        
+        .pricing-section h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: #0f172a;
+        }
+        
+        .price-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 48px 32px;
+            border-radius: 16px;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.3);
+        }
+        
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .price-amount span {
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            font-weight: 400;
+        }
+        
+        .price-description {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+        }
+        
+        .value-props {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .value-props li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            font-size: 1rem;
+            color: #e2e8f0;
+        }
+        
+        .value-props li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        
+        .cta-section .cta-subtext {
+            font-size: 1.2rem;
+            color: #dbeafe;
+            margin-bottom: 40px;
+        }
+        
+        .cta-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 32px;
+            border-radius: 12px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-form h3 {
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            color: #1e293b;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .guarantee {
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+        }
+        
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_18" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_18" style="color:#fff">email</a></div>

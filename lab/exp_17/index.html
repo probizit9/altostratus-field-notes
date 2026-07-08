@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Label AI Booking Assistant for Travel Companies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            margin: 0 -20px 40px -20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .subheadline {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        .pain-section {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+        .pain-section h2 {
+            color: #991b1b;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .pain-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pain-section li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            color: #7f1d1d;
+        }
+        .pain-section li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+        }
+        .solution-section {
+            margin-bottom: 40px;
+        }
+        .solution-section h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .features {
+            display: grid;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            background: #f0f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #bfdbfe;
+        }
+        .feature h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .feature p {
+            color: #1e3a8a;
+            line-height: 1.7;
+        }
+        .pricing-section {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 2px solid #e5e7eb;
+        }
+        .pricing-section h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+        .price-box {
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .price-box .price {
+            font-size: 2em;
+            color: #1e3a8a;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .price-box ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .price-box li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: #4b5563;
+        }
+        .price-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 50px 30px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            margin: 40px 0;
+        }
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .cta-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1em;
+            border: 2px solid #bfdbfe;
+            border-radius: 6px;
+            outline: none;
+        }
+        .form-group input:focus {
+            border-color: #60a5fa;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.2em;
+            font-weight: 700;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: #059669;
+        }
+        .guarantee {
+            margin-top: 20px;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .demo-section {
+            background: #fffbeb;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #fbbf24;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .demo-section h3 {
+            color: #92400e;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        .demo-section p {
+            color: #78350f;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .subheadline {
+                font-size: 1.1em;
+            }
+            header {
+                padding: 40px 20px 30px;
+            }
+            .pain-section, .pricing-section, .feature {
+                padding: 20px;
+            }
+            .cta-section {
+                padding: 35px 20px;
+            }
+            .cta-section h2 {
+                font-size: 1.5em;
+            }
+            .price-box .price {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+<meta name="description" content="White-label AI booking assistant infrastructure for travel companies"></head>
+<body>
+    <header>
+        <div class="container">
+            <h1>White-Label AI Booking Assistant for Your Travel Brand</h1>
+            <p class="subheadline">Deploy a fully-branded AI assistant that handles customer bookings 24/7—under your company name</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="pain-section">
+            <h2>The Problem Travel Companies Face Today</h2>
+            <ul>
+                <li>Customer inquiries flood in 24/7, but support teams only work business hours</li>
+                <li>Building custom AI technology in-house costs $500K+ and takes 12-18 months</li>
+                <li>Generic chatbots frustrate customers and can't actually complete bookings</li>
+                <li>Every missed inquiry after-hours is revenue walking out the door</li>
+                <li>Customers expect instant, intelligent responses—your competitors are already investing in AI</li>
+            </ul>
+        </section>
+
+        <section class="solution-section">
+            <h2>What You Get: Enterprise-Grade AI Under Your Brand</h2>
+            <p>We provide the complete AI booking assistant infrastructure. You brand it as your own. Your customers never know we exist.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>🤖 Intelligent Booking Engine</h3>
+                    <p>Natural language processing understands customer intent and handles hotel bookings end-to-end. No human intervention required for standard requests.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 100% Your Brand</h3>
+                    <p>Complete white-label solution. Your logo, your colors, your domain. The AI assistant appears as your proprietary technology.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Fast Deployment</h3>
+                    <p>Live in 2-4 weeks, not months. We handle all technical infrastructure, integration with your systems, and ongoing maintenance.</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 Analytics Dashboard</h3>
+                    <p>Track bookings, conversation quality, customer satisfaction, and ROI. Real-time insights into assistant performance.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔄 Continuous Improvement</h3>
+                    <p>Regular updates with latest AI capabilities. We improve the technology; you reap the benefits without additional development costs.</p>
+                </div>
+                <div class="feature">
+                    <h3>🛠️ Full Support</h3>
+                    <p>Dedicated technical support, training for your team, and optimization consulting included in your license.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h3>📱 See a Working Demo</h3>
+            <p>Request access to our live hotel booking assistant demo and see exactly how it works with real conversations.</p>
+        </section>
+
+        <section class="pricing-section">
+            <h2>Transparent Pricing</h2>
+            <div class="price-box">
+                <div class="price">$3,000 - $10,000/month</div>
+                <p><strong>Monthly license fee based on:</strong></p>
+                <ul>
+                    <li>Conversation volume</li>
+                    <li>Integration complexity</li>
+                    <li>Customization requirements</li>
+                    <li>Support level needed</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>One-time setup: $10,000 - $25,000</strong></p>
+                <ul>
+                    <li>Custom branding and configuration</li>
+                    <li>System integration and testing</li>
+                    <li>Team training<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_17" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_17" style="color:#fff">email</a></div>
