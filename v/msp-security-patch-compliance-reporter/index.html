@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Automate Monthly Patch Compliance Reports for Clients</title>
+<meta name="description" content="Stop spending 30-60 minutes per client manually exporting patch status from your RMM—generate branded PDF compliance reports automatically.">
+<style>
+:root{--bg:#0b1220;--card:#141d2e;--ink:#eaf0fa;--mut:#95a6c4;--acc:#3b82f6;--ok:#34d399}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px}h1{font-size:2.1rem;line-height:1.15;margin:.2em 0}
+.sub{font-size:1.15rem;color:var(--mut);margin:.4em 0 1.6em}.acc{color:var(--acc)}
+.card{background:var(--card);border:1px solid #223049;border-radius:14px;padding:20px 24px;margin:18px 0}
+h2{font-size:1.25rem;margin:1.6em 0 .3em}ul{padding-left:1.2em}li{margin:.35em 0}
+.price{font-size:2rem;font-weight:700}.mut{color:var(--mut)}
+form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+input{flex:1;min-width:220px;padding:13px 14px;border-radius:10px;border:1px solid #2b3a57;background:#0e1626;color:var(--ink);font-size:1rem}
+button{padding:13px 22px;border:0;border-radius:10px;background:var(--acc);color:#fff;font-weight:600;font-size:1rem;cursor:pointer}
+.foot{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid #223049;padding-top:16px}
+</style></head><body><div class="wrap">
+<h1>Automate Monthly Patch Compliance Reports for Clients</h1><p class="sub">Stop spending 30-60 minutes per client manually exporting patch status from your RMM—generate branded PDF compliance reports automatically.</p>
+<div class="card" id="cta"><b>Get early access</b><p class="mut">For MSPs &amp; IT teams. No spam — we email you once it's ready.</p>
+<form onsubmit="lead(event)"><input id="email" type="email" required placeholder="you@company.com"><button>Request access</button></form></div>
+<h2>The problem</h2><ul><li>You&#x27;re spending 10-20+ hours every month manually pulling patch data from ConnectWise/Datto/Ninja for client reports</li><li>Clients demand proof of patch compliance for cyber insurance audits, and threaten to leave if you can&#x27;t document it</li><li>Your techs hate the tedious copy-paste work, and reports still go out late or inconsistent</li></ul>
+<h2>How it works</h2><ul><li>Connect your existing RMM (ConnectWise Automate, Datto RMM, or Ninja) via read-only API in under 5 minutes</li><li>We pull patch status data nightly and calculate compliance percentages plus flag missing critical patches per client</li><li>Receive branded PDF reports for all clients on the 1st of each month—download and forward, or auto-email to clients</li></ul>
+<h2>What you get</h2><ul><li>Direct API integration with ConnectWise Automate, Datto RMM, and Ninja (read-only access)</li><li>Automated monthly PDF showing patch compliance %, missing critical updates, and server/workstation breakdown</li><li>White-label reports with your MSP logo and branding</li><li>Email delivery scheduler to send reports directly to client contacts</li></ul>
+<h2>Pricing</h2><div class="card"><div class="price">$99/mo + $2 per client</div><p class="mut">Example: 50 clients = $199/mo total. No contracts, cancel anytime. 14-day free trial.</p></div>
+<h2>FAQ</h2><div class="card"><b>Which RMM tools do you support?</b><p class="mut">Currently ConnectWise Automate, Datto RMM, and Ninja RMM. We use read-only API access—no changes to your RMM configuration.</p></div><div class="card"><b>How long does setup take?</b><p class="mut">Under 5 minutes. You provide API credentials, map your client list, and reports generate automatically on the schedule you choose.</p></div><div class="card"><b>What if a client doesn&#x27;t need a report one month?</b><p class="mut">You only pay the $2/client fee for clients you actively include. Pause or exclude clients anytime from your dashboard.</p></div>
+<div class="foot">Built by an AI-infrastructure engineer. Early-access — help shape it. Questions: reply to your confirmation email.</div>
+</div>
+<script>
+async function lead(e){e.preventDefault();var em=document.getElementById('email').value;
+try{await fetch('https://brain.altostratus.biz/api/engine/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,venture:'msp-security-patch-compliance-reporter',url:location.href})});}catch(_){}
+document.getElementById('cta').innerHTML='<b class="acc">✓ You\'re on the list.</b><p class="mut">We\'ll email '+em+' the moment early access opens.</p>';}
+</script></body></html>
