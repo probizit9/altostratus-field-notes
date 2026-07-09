@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Stop Rewriting RFPs From Scratch</title>
+<meta name="description" content="Turn your past proposals into a searchable library that drafts new RFP responses in 30 minutes instead of 20 hours.">
+<style>
+:root{--bg:#0b1220;--card:#141d2e;--ink:#eaf0fa;--mut:#95a6c4;--acc:#3b82f6;--ok:#34d399}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px}h1{font-size:2.1rem;line-height:1.15;margin:.2em 0}
+.sub{font-size:1.15rem;color:var(--mut);margin:.4em 0 1.6em}.acc{color:var(--acc)}
+.card{background:var(--card);border:1px solid #223049;border-radius:14px;padding:20px 24px;margin:18px 0}
+h2{font-size:1.25rem;margin:1.6em 0 .3em}ul{padding-left:1.2em}li{margin:.35em 0}
+.price{font-size:2rem;font-weight:700}.mut{color:var(--mut)}
+form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+input{flex:1;min-width:220px;padding:13px 14px;border-radius:10px;border:1px solid #2b3a57;background:#0e1626;color:var(--ink);font-size:1rem}
+button{padding:13px 22px;border:0;border-radius:10px;background:var(--acc);color:#fff;font-weight:600;font-size:1rem;cursor:pointer}
+.foot{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid #223049;padding-top:16px}
+</style></head><body><div class="wrap">
+<h1>Stop Rewriting RFPs From Scratch</h1><p class="sub">Turn your past proposals into a searchable library that drafts new RFP responses in 30 minutes instead of 20 hours.</p>
+<div class="card" id="cta"><b>Get early access</b><p class="mut">For MSPs &amp; IT teams. No spam — we email you once it's ready.</p>
+<form onsubmit="lead(event)"><input id="email" type="email" required placeholder="you@company.com"><button>Request access</button></form></div>
+<h2>The problem</h2><ul><li>Your team spends 8-20 hours per RFP hunting through old Word docs and copying answers into new proposals</li><li>You win only 10-20% of RFPs, meaning most of that effort produces zero revenue</li><li>RFP volume has tripled but you can&#x27;t hire fast enough, so you&#x27;re declining opportunities or burning out your BD team</li></ul>
+<h2>How it works</h2><ul><li>Upload your past proposals once—we categorize every answer by topic (security, pricing, methodology, certifications, etc.)</li><li>Paste in a new RFP and our AI matches each question to your best previous answers, flagging gaps</li><li>Export a complete Word doc draft in 30 minutes, ready for your team to customize and finalize</li></ul>
+<h2>What you get</h2><ul><li>Searchable library of all past RFP answers, tagged by category and keyword</li><li>AI-powered question matching that learns your terminology and proposal style</li><li>One-click Word doc export with your formatting and branding intact</li><li>Track which answers win most often so you can refine your library over time</li></ul>
+<h2>Pricing</h2><div class="card"><div class="price">$199/mo</div><p class="mut">Unlimited RFPs, unlimited users. Cancel anytime. Saves 15+ hours per RFP—pays for itself on your first response.</p></div>
+<h2>FAQ</h2><div class="card"><b>How do you handle our confidential client information?</b><p class="mut">All data is encrypted at rest and in transit. You control what gets stored—redact client names before upload. We never train our models on your data or share it with other customers.</p></div><div class="card"><b>Does this work with our existing proposal templates and branding?</b><p class="mut">Yes. Export to Word with your fonts, colors, headers and footers preserved. You maintain full control over final formatting and approval before submission.</p></div><div class="card"><b>What if a question doesn&#x27;t match anything in our library?</b><p class="mut">The system flags unanswered questions and partial matches so you know exactly what needs to be written fresh. Over time, these new answers get added to your library automatically.</p></div>
+<div class="foot">Built by an AI-infrastructure engineer. Early-access — help shape it. Questions: reply to your confirmation email.</div>
+</div>
+<script>
+async function lead(e){e.preventDefault();var em=document.getElementById('email').value;
+try{await fetch('https://brain.altostratus.biz/api/engine/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,venture:'rfp-auto-responder-for-it-services',url:location.href})});}catch(_){}
+document.getElementById('cta').innerHTML='<b class="acc">✓ You\'re on the list.</b><p class="mut">We\'ll email '+em+' the moment early access opens.</p>';}
+</script></body></html>
