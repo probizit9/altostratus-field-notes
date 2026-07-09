@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Label AI Content Engine for Fintech B2B SaaS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .subheadline {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+        
+        section {
+            padding: 50px 0;
+        }
+        
+        h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+        
+        .pain-section {
+            background: #fef3e2;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .pain-section h2 {
+            color: #c05621;
+        }
+        
+        .pain-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .pain-list li {
+            font-size: 1.125rem;
+            padding: 12px 0 12px 35px;
+            position: relative;
+            color: #744210;
+        }
+        
+        .pain-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #c05621;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .solution-section {
+            background: #f7fafc;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .deliverables {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .deliverables li {
+            font-size: 1.125rem;
+            padding: 15px 0 15px 40px;
+            position: relative;
+            color: #2d3748;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .deliverables li:last-child {
+            border-bottom: none;
+        }
+        
+        .deliverables li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .pricing-box {
+            background: #ffffff;
+            border: 3px solid #667eea;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .pricing-box h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0;
+        }
+        
+        .price-detail {
+            font-size: 1rem;
+            color: #718096;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee {
+            background: #e6fffa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #234e52;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 40px;
+            border-radius: 8px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .cta-section h2 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            color: #ffffff;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        input[type="email"] {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.125rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            padding: 18px 40px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #667eea;
+            background: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .how-it-works {
+            background: #ffffff;
+            margin: 40px 0;
+        }
+        
+        .step {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .step:last-child {
+            border-bottom: none;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.25rem;
+        }
+        
+        .faq {
+            margin: 40px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+        }
+        
+        .faq-item h3 {
+            font-size: 1.125rem;
+            color: #2d3748;
+        }
+        
+        .faq-item p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #718096;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.875rem;
+            }
+            
+            .subheadline {
+                font-size: 1.125rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .pain-section, .solution-section, .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .pricing-box {
+                padding: 30px 20px;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+<meta name="description" content="White-label AI financial content engine for fintech B2B SaaS companies"></head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stop Struggling With Content. Start Shipping Premium Fintech Content at Scale.</h1>
+            <p class="subheadline">White-label AI content engine that produces blogs, case studies, emails, webinar scripts, and social posts—under your brand, on your schedule</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="pain-section">
+            <h2>Your Content Problem Is Costing You Customers</h2>
+            <p>As a B2B fintech SaaS company, you know content drives inbound leads and establishes authority. But your reality looks like this:</p>
+            <ul class="pain-list">
+                <li>You're publishing fewer than 2 blog posts per month (or none at all)</li>
+                <li>Your marketing team is buried in product launches and campaigns—no time for content</li>
+                <li>Freelancers don't understand your complex product or fintech regulations</li>
+                <li>Agencies charge $5K-10K per piece and take weeks to deliver</li>
+                <li>Your competitors are outranking you and capturing your ideal customers</li>
+            </ul>
+            <p><strong>Meanwhile, your pipeline stays empty and your domain authority flatlines.</strong></p>
+        </section>
+
+        <section class="solution-section">
+            <h2>What You Get: A Complete White-Label Content Engine</h2>
+            <p>We provide a turnkey AI-powered content production system that operates under your brand. You get professional fintech content without hiring, training, or managing a content team.</p>
+            
+            <h3>Delivered Every Month:</h3>
+            <ul class="deliverables">
+                <li><strong>8-12 SEO-optimized blog posts</strong> (1,200-2,000 words) targeting your buyer keywords</li>
+                <li><strong>2-3 in-depth case studies</strong> showcasing customer results and ROI</li>
+                <li><strong>4 email nurture sequences</strong> (5-7 emails each) for different funnel stages</li>
+                <li><strong>2 complete webinar scripts</strong> with slides outline and Q&A prep</li>
+                <li><strong>20-25 social media posts</strong> (LinkedIn-focused) with engagement hooks</li>
+                <li><strong>All content reviewed for fintech compliance</strong> and brand voice consistency</li>
+            </ul<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_23" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_23" style="color:#fff">email</a></div>
