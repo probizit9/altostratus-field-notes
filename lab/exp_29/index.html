@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Crypto Signals - Test Lab | Free Trading Signals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0066ff;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 20px 0;
+            color: #0a0a0a;
+        }
+        .subheadline {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin: 15px 0 30px;
+            font-weight: 400;
+        }
+        .pain-section {
+            background: #f8f9fa;
+            border-left: 4px solid #ff6b6b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .pain-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+        .pain-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pain-section li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: #3a3a3a;
+        }
+        .pain-section li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .solution-section {
+            background: #f0f7ff;
+            border-left: 4px solid #0066ff;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .solution-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+        }
+        .solution-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .solution-section li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: #2a2a2a;
+        }
+        .solution-section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00c853;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .offer-box {
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .offer-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0a0a0a;
+        }
+        .price-tier {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 6px;
+        }
+        .price-tier h4 {
+            font-size: 18px;
+            color: #0066ff;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0a0a0a;
+            margin: 10px 0;
+        }
+        .price-tier ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .price-tier li {
+            padding: 6px 0;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+        .highlight-box {
+            background: #fff8e1;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .highlight-box p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+            padding: 40px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .cta-section h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-group input[type="email"]:focus {
+            border-color: #0066ff;
+        }
+        .btn-primary {
+            background: #00c853;
+            color: #ffffff;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 15px;
+        }
+        .btn-primary:hover {
+            background: #00a544;
+            transform: translateY(-2px);
+        }
+        .trust-note {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #6a6a6a;
+        }
+        .details-section {
+            margin: 30px 0;
+        }
+        .details-section h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #0a0a0a;
+        }
+        .details-section p {
+            color: #4a4a4a;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        .faq {
+            margin: 40px 0;
+        }
+        .faq h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0a0a0a;
+        }
+        .faq-item {
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .faq-item h4 {
+            font-size: 17px;
+            color: #2a2a2a;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #8a8a8a;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 50px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            .subheadline {
+                font-size: 18px;
+            }
+            .price {
+                font-size: 28px;
+            }
+            .cta-section h3 {
+                font-size: 22px;
+            }
+            .offer-box, .pain-section, .solution-section {
+                padding: 20px;
+            }
+        }
+    </style>
+<meta name="description" content="AI trading signals/automation content subscription (Telegram/X premium channels)"></head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">📊 AI Crypto Signals</div>
+            <h1>Stop Guessing. Start Trading with AI-Powered Crypto Signals</h1>
+            <p class="subheadline">Get data-driven BTC & ETH trading signals delivered daily to your Telegram — completely free for 2 weeks</p>
+        </header>
+
+        <div class="pain-section">
+            <h2>Tired of Missing Profitable Crypto Trades?</h2>
+            <ul>
+                <li>You're watching charts all day but still enter too late or exit too early</li>
+                <li>Emotional decisions are draining your portfolio while others profit</li>
+                <li>You lack the time or tools to analyze market data 24/7</li>
+                <li>You've tried "guru" signals that turned out to be random guesses</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h2>What You'll Get in Our Free Test Lab</h2>
+            <ul>
+                <li><strong>3 AI-generated signals daily</strong> for Bitcoin (BTC) and Ethereum (ETH)</li>
+                <li>Entry points, stop-loss, and take-profit levels clearly marked</li>
+                <li>Signals generated using live TradingView data and AI pattern recognition</li>
+                <li>Delivered directly to your Telegram — no app downloads or complex setup</li>
+                <li>100% transparent: track every signal result in real-time</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <p>🎯 This is a 2-week test to validate our AI signal accuracy. Join early and see the results yourself.</p>
+        </div>
+
+        <div class="offer-box">
+            <h3>Pricing & What's Included</h3>
+            
+            <div class="price-tier">
+                <h4>Free Test Lab (Current Offer)</h4>
+                <div class="price">$0</div>
+                <ul>
+                    <li>✓ 3 daily signals for BTC & ETH</li>
+                    <li>✓ Entry/exit levels for each signal</li>
+                    <li>✓ 2 weeks of access</li>
+                    <li>✓ Full transparency on results</li>
+                </ul>
+            </div>
+
+            <div class="price-tier" style="border:<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_29" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_29" style="color:#fff">email</a></div>

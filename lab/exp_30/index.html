@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Infrastructure for Automation Agencies | Scale Without the DevOps Headache</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .subheadline {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .pain-section {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .pain-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #d68910;
+        }
+        .pain-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .pain-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        .pain-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .solution-section {
+            margin: 40px 0;
+        }
+        .solution-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .deliverables {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 25px 0;
+        }
+        .deliverables h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #495057;
+        }
+        .deliverables ul {
+            list-style: none;
+        }
+        .deliverables li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        .deliverables li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .pricing-section {
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 35px;
+            margin: 40px 0;
+            border: 2px solid #27ae60;
+        }
+        .pricing-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #1e8449;
+        }
+        .price-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .price-item {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #27ae60;
+        }
+        .price-item strong {
+            font-size: 1.1rem;
+            color: #1e8449;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .price-note {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 30px;
+            border-radius: 12px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .offer-box {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        .offer-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .offer-box p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .offer-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 10px;
+            color: #ffd700;
+        }
+        form {
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.05rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        button {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            background: #ffd700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .requirements {
+            background: white;
+            color: #2d3748;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 25px;
+            font-size: 0.95rem;
+        }
+        .requirements strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            .subheadline {
+                font-size: 1.1rem;
+            }
+            header {
+                padding: 40px 20px 30px;
+            }
+            .pain-section,
+            .deliverables,
+            .pricing-section {
+                padding: 25px 20px;
+            }
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+<meta name="description" content="AI infrastructure-as-a-service for emerging AI automation agencies"></head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stop Losing Clients Because Your AI Infrastructure Can't Scale</h1>
+            <p class="subheadline">Fully managed GPU clusters, model deployment, and Kubernetes infrastructure for AI automation agencies—without hiring a DevOps team</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="pain-section">
+            <h2>You're Winning Clients, But Your Infrastructure Is Holding You Back</h2>
+            <p>If you're running an AI automation agency, you already know these problems:</p>
+            <ul class="pain-list">
+                <li>Clients want custom AI solutions, but you're stuck cobbling together unreliable API calls</li>
+                <li>You waste 15+ hours per week fighting infrastructure issues instead of delivering client value</li>
+                <li>Hiring DevOps talent costs $120K+/year—money you don't have when scaling from 3 to 10 clients</li>
+                <li>Model deployment takes days when it should take minutes, slowing down delivery timelines</li>
+                <li>You can't confidently take on enterprise clients because your infrastructure isn't production-grade</li>
+            </ul>
+        </section>
+
+        <section class="solution-section">
+            <h2>Enterprise-Grade AI Infrastructure, Without the Enterprise Overhead</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 25px;">We provide the complete technical backbone your agency needs to scale from 5 to 50 clients—without adding engineering headcount.</p>
+            
+            <div class="deliverables">
+                <h3>What You Get:</h3>
+                <ul>
+                    <li><strong>Dedicated GPU Clusters:</strong> Pre-configured Kubernetes environments optimized for LLM inference, fine-tuning, and computer vision workloads</li>
+                    <li><strong>One-Click Model Deployment:</strong> Deploy any model (Llama, Mistral, Stable Diffusion, custom) with automatic scaling and load balancing</li>
+                    <li><strong>99.9% Uptime SLA:</strong> Production-grade monitoring, alerting, and incident response—your clients never see downtime</li>
+                    <li><strong>Managed Services:</strong> We handle updates, security patches, cost optimization, and infrastructure scaling</li>
+                    <li><strong>Multi-Tenant Isolation:</strong> Keep each client's data and models completely separate with enterprise security standards</li>
+                    <li><strong>Cost Transparency:</strong> Real-time dashboards showing exact infrastructure costs per client (no surprise bills)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <h2>Transparent Pricing Built for Agency Economics</h2>
+            <div class="price-grid">
+                <div class="price-item">
+                    <strong>Monthly Infrastructure + Managed Services:</strong>
+                    $3,000 - $12,000 per agency client depending on compute requirements
+                </div>
+                <div class="price-item">
+                    <strong>Initial Setup & Migration:</strong>
+                    $8,000 - $20,000<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_30" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_30" style="color:#fff">email</a></div>
