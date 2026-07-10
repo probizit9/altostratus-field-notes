@@ -1,386 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7-Day Free Ad Creative Sprint for DTC Brands | AI-Powered Ad Generation</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-        
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 40px 20px 30px;
-        }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0066ff;
-            margin-bottom: 10px;
-        }
-        
-        h1 {
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin: 30px 0 20px;
-            color: #0a0a0a;
-        }
-        
-        .subheadline {
-            font-size: 20px;
-            color: #4a4a4a;
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-        
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            padding: 50px 30px;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .hero-section h1 {
-            color: #ffffff;
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        
-        .hero-section .subheadline {
-            color: #f0f0ff;
-            font-size: 22px;
-        }
-        
-        .pain-section {
-            background: #fef3f2;
-            border-left: 4px solid #ef4444;
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 8px;
-        }
-        
-        .pain-section h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #991b1b;
-        }
-        
-        .pain-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .pain-section li {
-            padding: 10px 0;
-            padding-left: 28px;
-            position: relative;
-            color: #4a4a4a;
-            font-size: 17px;
-        }
-        
-        .pain-section li:before {
-            content: "✗";
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-        .solution-section {
-            margin-bottom: 40px;
-        }
-        
-        .solution-section h2 {
-            font-size: 28px;
-            margin-bottom: 25px;
-            color: #0a0a0a;
-            text-align: center;
-        }
-        
-        .deliverable-box {
-            background: #f8fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .deliverable-box h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #1e293b;
-            display: flex;
-            align-items: center;
-        }
-        
-        .deliverable-box h3:before {
-            content: "✓";
-            display: inline-block;
-            width: 26px;
-            height: 26px;
-            background: #10b981;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 26px;
-            margin-right: 12px;
-            font-weight: bold;
-        }
-        
-        .deliverable-box p {
-            color: #475569;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .offer-box {
-            background: #fffbeb;
-            border: 3px solid #fbbf24;
-            border-radius: 12px;
-            padding: 35px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        
-        .offer-label {
-            display: inline-block;
-            background: #fbbf24;
-            color: #78350f;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 15px;
-        }
-        
-        .offer-box h2 {
-            font-size: 32px;
-            color: #0a0a0a;
-            margin-bottom: 15px;
-        }
-        
-        .offer-box .offer-details {
-            font-size: 18px;
-            color: #4a4a4a;
-            margin-bottom: 10px;
-        }
-        
-        .price-info {
-            font-size: 16px;
-            color: #78350f;
-            margin-top: 15px;
-            font-weight: 600;
-        }
-        
-        .form-section {
-            background: #ffffff;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 40px;
-            margin: 40px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        
-        .form-section h2 {
-            font-size: 26px;
-            margin-bottom: 10px;
-            text-align: center;
-            color: #0a0a0a;
-        }
-        
-        .form-intro {
-            text-align: center;
-            color: #6b7280;
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #374151;
-            font-size: 15px;
-        }
-        
-        input[type="email"],
-        input[type="text"],
-        input[type="url"] {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        
-        input[type="email"]:focus,
-        input[type="text"]:focus,
-        input[type="url"]:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        
-        .cta-button {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 18px 32px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin-top: 10px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
-        }
-        
-        .trust-note {
-            text-align: center;
-            font-size: 14px;
-            color: #6b7280;
-            margin-top: 20px;
-            font-style: italic;
-        }
-        
-        .how-it-works {
-            margin: 50px 0;
-        }
-        
-        .how-it-works h2 {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 35px;
-            color: #0a0a0a;
-        }
-        
-        .step {
-            display: flex;
-            margin-bottom: 25px;
-            align-items: start;
-        }
-        
-        .step-number {
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-            margin-right: 20px;
-        }
-        
-        .step-content h3 {
-            font-size: 18px;
-            margin-bottom: 6px;
-            color: #1e293b;
-        }
-        
-        .step-content p {
-            color: #64748b;
-            font-size: 15px;
-        }
-        
-        .pricing-context {
-            background: #f0fdf4;
-            border: 2px solid #86efac;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-        
-        .pricing-context h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #166534;
-            text-align: center;
-        }
-        
-        .pricing-context p {
-            color: #166534;
-            font-size: 16px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .pricing-tiers {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .pricing-tier {
-            flex: 1;
-            min-width: 200px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #86efac;
-        }
-        
-        .pricing-tier h4 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #0a0a0a;
-        }
-        
-        .pricing-tier .price {
-            font-size: 24px;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 8px;
-        }
-        
-        .pricing-tier ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .pricing-tier li {
-            font-size: 14px;
-            color: #4a4a4a;
-            padding: 4px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .pricing-tier li:before {
-            content: "•<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_22" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_22" style="color:#fff">email</a></div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce DTC: What It Means & How AI Powers Modern DTC Brands</title>
+<meta name="description" content="E-commerce DTC (Direct-to-Consumer) means brands selling directly to customers online, bypassing retailers. Learn how autonomous AI content and ad creative generation transforms DTC acquisition.">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  line-height: 1.7;
+  padding: 20px;
+  font-size: 17px;
+}
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 2rem;
+  margin: 40px 0 30px;
+  color: #ffffff;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 50px 0 20px;
+  color: #00AFA9;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.2rem;
+  margin: 30px 0 15px;
+  color: #ffffff;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 20px;
+}
+ul, ol {
+  margin: 20px 0 20px 25px;
+}
+li {
+  margin-bottom: 12px;
+}
+strong {
+  color: #ffffff;
+}
+.intro {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  border-left: 3px solid #00AFA9;
+}
+.faq-item {
+  margin-bottom: 35px;
+  padding: 25px;
+  background-color: #151515;
+  border-radius: 8px;
+  border-left: 4px solid #00AFA9;
+}
+.faq-question {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #00AFA9;
+  margin-bottom: 12px;
+}
+.faq-answer {
+  color: #d0d0d0;
+}
+.offer-section {
+  background: linear-gradient(135deg, #0d1f1e 0%, #0a0a0a 100%);
+  padding: 40px;
+  margin: 50px 0;
+  border-radius: 12px;
+  border: 2px solid #00AFA9;
+  text-align: center;
+}
+.offer-section h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+.price {
+  font-size: 2.5rem;
+  color: #00AFA9;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.price-detail {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+.cta-button {
+  display: inline-block;
+  background-color: #00AFA9;
+  color: #0a0a0a;
+  padding: 18px 45px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.cta-button:hover {
+  background-color: #00d9cc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 175, 169, 0.3);
+}
+.comparison-table {
+  width: 100%;
+  margin: 30px 0;
+  border-collapse: collapse;
+  background-color: #151515;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #2a2a2a;
+}
+.comparison-table th {
+  background-color: #1a1a1a;
+  color: #00AFA9;
+  font-weight: 600;
+}
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 30px 0 20px;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .offer-section {
+    padding: 25px 20px;
+  }
+  .price {
+    font-size: 2rem;
+  }
+  .cta-button {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does e-commerce DTC mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "E-commerce DTC (Direct-to-Consumer) means brands sell their products directly to customers through their own online channels—websites, mobile apps, social media—without intermediaries like retailers, wholesalers, or distributors. This model gives brands complete control over customer experience, pricing, data, and brand messaging while eliminating retail markups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between e-commerce and DTC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "E-commerce is the broad practice of selling products or services online through any channel. DTC is a specific e-commerce business model where brands sell directly to end customers without middlemen. Traditional e-commerce can include selling through Amazon, eBay, or wholesale to retailers, while DTC means owning the entire customer relationship through brand-owned channels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are examples of DTC e-commerce brands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Successful DTC e-commerce brands include Warby Parker (eyewear), Casper (mattresses), Glossier (beauty), Allbirds (footwear), Dollar Shave Club (grooming), and Everlane (apparel). These companies built their businesses by selling directly to consumers online, controlling their brand narrative, and using customer data to optimize products and marketing."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "E-Commerce DTC: What It Means & How AI Powers Modern DTC Brands",
+  "description": "Comprehensive guide to e-commerce DTC model and how autonomous AI content and ad creative generation transforms DTC customer acquisition",
+  "author": {
+    "@type": "Organization",
+    "name": "Altostratus Consulting"
+  },
+  "datePublished": "2025-01-17",
+  "dateModified": "2025-01-17"
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>What is E-Commerce DTC and How Do Modern DTC Brands Use AI for Customer Acquisition?</h1>
+  </header>
+
+  <div class="intro">
+    Direct-to-Consumer e-commerce is reshaping how brands connect with customers. Understanding the DTC model—and how autonomous AI transforms its biggest challenge, customer acquisition—is essential for anyone building or scaling an online brand in 2025.
+  </div>
+
+  <main>
+    <section>
+      <h2>What E-Commerce DTC Means</h2>
+      <p><strong>E-commerce DTC (Direct-to-Consumer)</strong> is a business model where brands manufacture and sell products directly to end customers through digital channels they own—primarily websites, mobile apps, and social media—without intermediaries like retailers, distributors, or wholesalers.</p>
+      
+      <p>This model emerged as internet infrastructure, digital payment systems, and logistics networks matured. Brands realized they could bypass traditional retail gatekeepers, keep full profit margins, own customer relationships and data, and control every aspect of the customer experience from first impression to post-purchase support.</p>
+
+      <p>The core characteristics of e-commerce DTC companies include:</p>
+      <ul>
+        <li><strong>Owned channels:</strong> Sales happen through brand-controlled digital properties</li>
+        <li><strong>Direct relationships:</strong> Brands collect first-party customer data and communicate directly</li>
+        <li><strong>Vertical integration:</strong> Control over product development, marketing, sales, and often fulfillment</li>
+        <li><strong>Data-driven optimization:</strong> Direct feedback loops enable rapid iteration</li>
+        <li><strong>Brand storytelling:</strong> Complete control over messaging and positioning</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>E-Commerce vs DTC: Understanding the Difference</h2>
+      <p>While these terms are often used interchangeably, they represent different concepts:</p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>E-Commerce</th>
+            <th>DTC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Definition</strong></td>
+            <td>Selling products/services online through any channel</td>
+            <td>Selling directly to customers without intermediaries</td>
+          </tr>
+          <tr>
+            <td><strong>Scope</strong></td>
+            <td>Broad category encompassing all online sales</td>
+            <td>Specific business model within e-commerce</td>
+          </tr>
+          <tr>
+            <td><strong>Channels</strong></td>
+            <td>Amazon, eBay, marketplaces, own site, retailers</td>
+            <td>Brand-owned website, app, social commerce</td>
+          </tr>
+          <tr>
+            <td><strong>Customer Data</strong></td>
+            <td>Often limited or shared with platforms</td>
+            <td>Complete ownership of customer data</td>
+          </tr>
+          <tr>
+            <td><strong>Margins</strong></td>
+            <td>Varies; often reduced by platform fees</td>
+            <td>Higher margins by eliminating middlemen</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Example:</strong> A brand selling on Amazon is doing e-commerce but not DTC. The same brand selling through their own Shopify store while fulfilling orders themselves is both e-commerce and DTC.</p>
+    </section>
+
+    <section>
+      <h2>Notable DTC E-Commerce Brand Examples</h2>
+      <p>Real-world DTC e-commerce companies that successfully built direct customer relationships include:</p>
+      
+      <ul>
+        <li><strong>War
