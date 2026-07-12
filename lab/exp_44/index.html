@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Label Legal AI Content Infrastructure | Free 2-Week API Trial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .subheadline {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        .for-whom {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 15px;
+        }
+        .pain-section {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .pain-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #92400e;
+        }
+        .pain-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .pain-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #78350f;
+        }
+        .pain-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .solution-section {
+            padding: 40px 0;
+        }
+        .solution-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #1e3a8a;
+        }
+        .deliverables {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .deliverable-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .deliverable-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .deliverable-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: #1e3a8a;
+        }
+        .deliverable-card p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        .pricing-section {
+            background: #f1f5f9;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .pricing-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 25px;
+            color: #1e3a8a;
+        }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+            text-align: left;
+        }
+        .price-item {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+        .price-item h4 {
+            font-size: 1.1rem;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        .price-amount {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #059669;
+            margin: 10px 0;
+        }
+        .price-details {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: #ffffff;
+            padding: 50px 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .cta-section .benefits {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .trial-highlight {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 600px;
+        }
+        .trial-highlight h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .trial-highlight ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .trial-highlight li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+        }
+        .trial-highlight li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #34d399;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        form {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: #1a1a1a;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #34d399;
+            background: #ffffff;
+        }
+        button {
+            width: 100%;
+            padding: 16px 32px;
+            background: #059669;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #047857;
+        }
+        .trust-note {
+            font-size: 0.85rem;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.85rem;
+            }
+            .subheadline {
+                font-size: 1.1rem;
+            }
+            .solution-section h2,
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+            .pain-section,
+            .pricing-section,
+            .cta-section {
+                padding: 25px 20px;
+            }
+            .deliverables {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<meta name="description" content="White-label AI legal content automation infrastructure sold B2B to existing legal tech platforms and law firms"></head>
+<body>
+    <header>
+        <div class="container">
+            <h1>White-Label AI Legal Content Infrastructure for Your Platform</h1>
+            <p class="subheadline">Production-ready API endpoints for contract generation, legal document summarization, and automated content creation</p>
+            <p class="for-whom">For legal tech platforms and law firms ready to deploy AI features without building in-house</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="pain-section">
+            <h2>Your clients expect AI features. Building them in-house is a nightmare.</h2>
+            <ul class="pain-list">
+                <li>Hiring ML engineers costs $200k+ per year, and they take 6-12 months to ship anything production-ready</li>
+                <li>Legal-specific AI models require extensive training data and domain expertise you don't have</li>
+                <li>Compliance, accuracy validation, and liability concerns make you hesitate to deploy AI features</li>
+                <li>Your competitors are announcing AI capabilities while you're stuck in endless planning cycles</li>
+                <li>Every month without AI features is a month you risk losing clients to platforms that have them</li>
+            </ul>
+        </section>
+
+        <section class="solution-section">
+            <h2>Deploy Legal AI Features in Days, Not Months</h2>
+            <p style="text-align: center; color: #475569; max-width: 700px; margin: 0 auto 40px;">Our white-label API infrastructure gives you production-ready legal AI endpoints you can brand as your own. No ML team required. No model training. Just integrate and ship.</p>
+            
+            <div class="deliverables">
+                <div class="deliverable-card">
+                    <h3>Contract Generation API</h3>
+                    <p>Generate NDAs, service agreements, employment contracts, and custom legal documents from structured inputs. Context-aware, jurisdiction-specific, ready to review.</p>
+                </div>
+                <div class="deliverable-card">
+                    <h3>Document Summarization</h3>
+                    <p>Extract key terms, obligations, dates, and risks from contracts and legal documents. Multi-page analysis with cited references to source text.</p>
+                </div>
+                <div class="deliverable-card">
+                    <h3>Legal Content Automation</h3>
+                    <p<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_44" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_44" style="color:#fff">email</a></div>
