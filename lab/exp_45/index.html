@@ -1,255 +1,225 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>מחשבון גימטריה עברית למספרים של מלאכים וחישוב שנה אישית | נומרולוגיה עברית</title>
-<meta name="description" content="מחשבון גימטריה עברית למספרים של מלאכים, חישוב שנה אישית 2025, ומשמעות מספרים בעברית. גלה את האותיות העבריות המקבילות למספרים שלך והבן את המסרים הרוחניים.">
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  line-height: 1.7;
-  padding: 20px;
-}
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-header {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #00AFA9;
-}
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #ffffff;
-  line-height: 1.3;
-}
-h2 {
-  font-size: 1.5rem;
-  margin: 40px 0 20px;
-  color: #00AFA9;
-}
-h3 {
-  font-size: 1.2rem;
-  margin: 30px 0 15px;
-  color: #ffffff;
-}
-p {
-  margin-bottom: 20px;
-  font-size: 1.05rem;
-}
-.calculator {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 12px;
-  margin: 30px 0;
-  border: 1px solid #2a2a2a;
-}
-.calc-input {
-  margin-bottom: 20px;
-}
-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #00AFA9;
-  font-weight: 600;
-}
-input[type="number"],
-input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  background: #0a0a0a;
-  border: 2px solid #2a2a2a;
-  border-radius: 6px;
-  color: #e0e0e0;
-  font-size: 1rem;
-  direction: ltr;
-  text-align: center;
-}
-input[type="number"]:focus,
-input[type="text"]:focus {
-  outline: none;
-  border-color: #00AFA9;
-}
-button {
-  background: #00AFA9;
-  color: #0a0a0a;
-  border: none;
-  padding: 14px 32px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.3s;
-}
-button:hover {
-  background: #00c9c0;
-  transform: translateY(-2px);
-}
-.result {
-  background: #0a0a0a;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  border-right: 4px solid #00AFA9;
-  display: none;
-}
-.result.show {
-  display: block;
-}
-.gematria-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background: #1a1a1a;
-}
-.gematria-table th,
-.gematria-table td {
-  padding: 12px;
-  border: 1px solid #2a2a2a;
-  text-align: center;
-}
-.gematria-table th {
-  background: #00AFA9;
-  color: #0a0a0a;
-  font-weight: 700;
-}
-.faq {
-  margin: 40px 0;
-}
-.faq-item {
-  background: #1a1a1a;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border-right: 4px solid #00AFA9;
-}
-.faq-question {
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: #00AFA9;
-  margin-bottom: 12px;
-}
-.cta-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  margin: 50px 0;
-  border: 2px solid #00AFA9;
-}
-.cta-button {
-  display: inline-block;
-  background: #00AFA9;
-  color: #0a0a0a;
-  padding: 18px 48px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 8px;
-  margin-top: 20px;
-  transition: all 0.3s;
-}
-.cta-button:hover {
-  background: #00c9c0;
-  transform: translateY(-2px);
-}
-.highlight {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
-  border-right: 4px solid #00AFA9;
-}
-ul {
-  margin: 20px 0 20px 30px;
-}
-li {
-  margin-bottom: 10px;
-}
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  .calculator {
-    padding: 20px;
-  }
-  .cta-section {
-    padding: 25px;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חישוב שנה אישית נומרולוגיה 2025 | גימטריה עברית ומספרים של מלאכים</title>
+    <meta name="description" content="מחשבון נומרולוגי לחישוב שנה אישית 2025 עם גימטריה עברית. גלה את משמעות מספרים של מלאכים בעברית והאותיות העבריות המקבילות לשנתך האישית.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #00AFA9;
+            margin: 50px 0 25px 0;
+        }
+        h3 {
+            font-size: 1.3em;
+            color: #00AFA9;
+            margin: 30px 0 15px 0;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .intro {
+            background-color: #242424;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-right: 4px solid #00AFA9;
+        }
+        .calculator-section {
+            background-color: #242424;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .step {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .example {
+            background-color: #1f3a39;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #00AFA9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #242424;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #00AFA9;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+        .faq {
+            margin: 50px 0;
+        }
+        .faq-item {
+            background-color: #242424;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .faq-question {
+            font-size: 1.2em;
+            color: #00AFA9;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1f3a39 0%, #242424 100%);
+            border-radius: 12px;
+            border: 2px solid #00AFA9;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #00AFA9;
+            color: #1a1a1a;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 175, 169, 0.4);
+        }
+        .hebrew-letters {
+            font-size: 2em;
+            color: #00AFA9;
+            text-align: center;
+            margin: 10px 0;
+        }
+        ul {
+            margin: 20px 0 20px 40px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            .container {
+                padding: 15px;
+            }
+            .intro, .calculator-section, .cta {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "איך מחשבים שנה אישית בנומרולוגיה ל-2025?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "לחישוב שנה אישית ל-2025, יש לחבר את יום ולחודש הלידה שלך (בספרות) עם 2025. לדוגמה: אם נולדת ב-15 במרץ, מחברים 1+5+3+2+0+2+5=18, ואז 1+8=9. השנה האישית שלך היא 9. כל מספר בין 1-9 מתאים לאות עברית ומייצג אנרגיה שונה לשנה."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "מה המשמעות של מספרים של מלאכים בגימטריה עברית?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "מספרים של מלאכים הם רצפים חוזרים כמו 111, 222, 444 שנחשבים להודעות רוחניות. בגימטריה עברית, כל מספר מתאים לאות עברית עם משמעות עמוקה. לדוגמה: 1=א (אלף - התחלה), 2=ב (בית - בניין), 3=ג (גימל - תנועה). הקשר בין נומרולוגיה מערבית לגימטריה עברית מעניק עומק נוסף להבנת המספרים."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "מה ההבדל בין גימטריה עברית לנומרולוגיה מערבית?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "נומרולוגיה מערבית מבוססת על המספרים 1-9 ומשמעויותיהם האוניברסליות. גימטריה עברית מתבססת על 22 האותיות העבריות שלכל אחת ערך מספרי ומשמעות רוחנית עמוקה הקשורה לקבלה. שילוב שני הגישות מאפשר הבנה רב-ממדית של המספרים בחיינו ושל השנה האישית שלנו."
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "חישוב שנה אישית נומרולוגיה 2025 | גימטריה עברית ומספרים של מלאכים",
+        "description": "מדריך מקיף לחישוב שנה אישית ב-2025 עם גימטריה עברית, כולל משמעות מספרים של מלאכים והאותיות העבריות המקבילות",
+        "author": {
+            "@type": "Organization",
+            "name": "סוד הגורלות"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15"
+    }
+    </script>
 </head>
 <body>
-<div class="container">
-<header>
-<h1>איך מחשבים את השנה האישית שלי ב-2025 ומה המשמעות בגימטריה עברית?</h1>
-<p>מדריך מקיף לחישוב השנה האישית בנומרולוגיה, גימטריה עברית למספרים של מלאכים, ומשמעות מספרים בעברית. גלה את המספר האישי שלך לשנת 2025 ואת האותיות העבריות המקבילות לו.</p>
-</header>
+    <div class="container">
+        <header>
+            <h1>איך מחשבים שנה אישית בנומרולוגיה ל-2025 עם גימטריה עברית?</h1>
+        </header>
 
-<main>
-<section>
-<h2>חישוב שנה אישית 2025</h2>
-<p>השנה האישית בנומרולוגיה היא מחזור של תשע שנים המשקף את האנרגיות והנושאים המרכזיים בחייך באותה שנה. חישוב השנה האישית נעשה על ידי חיבור יום ולחודש הלידה שלך עם שנת 2025.</p>
+        <div class="intro">
+            <p>שנה אישית בנומרולוגיה היא מספר בין 1-9 שמייצג את האנרגיה והנושאים המרכזיים שילוו אותך לאורך השנה הקלנדרית. חישוב השנה האישית ל-2025 מתבצע על ידי חיבור תאריך הלידה שלך עם השנה הנוכחית. כשמשלבים את זה עם גימטריה עברית, אנחנו מקבלים גם את האות העברית המקבילה ומשמעותها הרוחנית העמוקה.</p>
+            <p>הקשר בין מספרים של מלאכים (כמו 111, 222, 333) לבין גימטריה עברית מעניק עומק נוסף להבנת המסרים הרוחניים שמגיעים אלינו דרך מספרים בחיי היומיום.</p>
+        </div>
 
-<div class="calculator">
-<h3>מחשבון שנה אישית ל-2025</h3>
-<div class="calc-input">
-<label for="day">יום לידה (1-31):</label>
-<input type="number" id="day" min="1" max="31" placeholder="למשל: 15">
-</div>
-<div class="calc-input">
-<label for="month">חודש לידה (1-12):</label>
-<input type="number" id="month" min="1" max="12" placeholder="למשל: 7">
-</div>
-<button onclick="calculatePersonalYear()">חשב שנה אישית</button>
-<div id="yearResult" class="result"></div>
-</div>
-</section>
-
-<section>
-<h2>גימטריה עברית למספרי מלאכים</h2>
-<p>גימטריה היא השיטה העברית העתיקה להקצאת ערכים מספריים לאותיות. כל אות עברית מייצגת מספר ספציפי, ומספרים אלו נושאים משמעויות רוחניות עמוקות. במסורת המודרנית של מספרי מלאכים, רבים מחפשים את המשמעות העברית והרוחנית של המספרים שהם רואים שוב ושוב.</p>
-
-<table class="gematria-table">
-<thead>
-<tr>
-<th>אות</th>
-<th>ערך גימטרי</th>
-<th>משמעות</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>א</td><td>1</td><td>התחלה, אחדות, אלוהות</td></tr>
-<tr><td>ב</td><td>2</td><td>בית, שיתוף, דואליות</td></tr>
-<tr><td>ג</td><td>3</td><td>גמול, צמיחה, ביטוי</td></tr>
-<tr><td>ד</td><td>4</td><td>דלת, יציבות, מבנה</td></tr>
-<tr><td>ה</td><td>5</td><td>חלון, גילוי, שינוי</td></tr>
-<tr><td>ו</td><td>6</td><td>וו, חיבור, אהבה</td></tr>
-<tr><td>ז</td><td>7</td><td>זקן, חכמה, שלמות רוחנית</td></tr>
-<tr><td>ח</td><td>8</td><td>חיים, שפע, אינסוף</td></tr>
-<tr><td>ט</td><td>9</td><td>טוב, השלמה, סיום מחזור</td></tr>
-</tbody>
-</table>
-
-<div class="calculator">
-<h3>מחשבון גימטריה למספרי מלאכים</h3>
-<div class="calc-input">
-<label for="angelNumber">הכנס מספר מלאך (למשל: 111, 222, 333):</label>
-<input type="number" id="angelNumber" placeholder="למשל: 111">
-</div>
-<button onclick="calculateGematria()">חשב משמעות גימטרית</button>
-<div id="gematriaResult" class
+        <div class="calculator-section">
+            <h2>איך מחשבים את השנה האישית ל-2025?</h2>
+            
+            <div class="step">
+                <h3>שלב 1: חבר את מרכיבי תאריך הלידה</h3>
+                <p>קח את היום והחודש שבו נולדת (בלבד, לא שנת הל
