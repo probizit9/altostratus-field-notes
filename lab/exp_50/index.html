@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Generation Retainer for Marketing Agencies | ContentFlow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            color: #1a202c;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .subheadline {
+            font-size: 20px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .pain-section {
+            background: #f7fafc;
+            border-left: 4px solid #e53e3e;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .pain-section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1a202c;
+        }
+        
+        .pain-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .pain-section li {
+            padding: 8px 0;
+            color: #4a5568;
+            font-size: 17px;
+        }
+        
+        .pain-section li:before {
+            content: "✗ ";
+            color: #e53e3e;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .solution-section {
+            margin: 40px 0;
+        }
+        
+        .solution-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a202c;
+            text-align: center;
+        }
+        
+        .deliverables {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .deliverables h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1a202c;
+        }
+        
+        .deliverables ul {
+            list-style: none;
+        }
+        
+        .deliverables li {
+            padding: 12px 0;
+            color: #4a5568;
+            font-size: 17px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .deliverables li:last-child {
+            border-bottom: none;
+        }
+        
+        .deliverables li:before {
+            content: "✓ ";
+            color: #38a169;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .how-it-works {
+            background: #edf2f7;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .how-it-works h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #1a202c;
+            text-align: center;
+        }
+        
+        .steps {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .step {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #4299e1;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #4299e1;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            color: #1a202c;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .step-description {
+            color: #4a5568;
+            font-size: 16px;
+            margin-left: 40px;
+        }
+        
+        .pricing-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: #ffffff;
+        }
+        
+        .pricing-section h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+        
+        .price-details {
+            font-size: 18px;
+            color: #e6e6ff;
+            margin-bottom: 10px;
+        }
+        
+        .trial-badge {
+            display: inline-block;
+            background: #f59e0b;
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        .cta-section {
+            background: #ffffff;
+            border: 3px solid #4299e1;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a202c;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-size: 16px;
+        }
+        
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4299e1;
+        }
+        
+        .cta-button {
+            width: 100%;
+            background: #4299e1;
+            color: #ffffff;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .cta-button:hover {
+            background: #3182ce;
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #718096;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #718096;
+            font-size: 14px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .price {
+                font-size: 36px;
+            }
+            
+            .pain-section,
+            .deliverables,
+            .how-it-works,
+            .cta-section,
+            .pricing-section {
+                padding: 20px;
+            }
+        }
+    </style>
+<meta name="description" content="AI-powered content generation retainer for marketing agencies to boost utilization rates and revenue-per-employee"></head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ContentFlow</div>
+            <div class="tagline">AI Content Retainer for Agencies</div>
+        </header>
+        
+        <section class="hero">
+            <h1>Scale Your Agency Revenue Without Hiring More Creatives</h1>
+            <p class="subheadline">Unlimited AI-powered content generation for all your clients. Boost utilization rates and revenue-per-employee with a flat monthly retainer.</p>
+        </section>
+        
+        <section class="pain-section">
+            <h2>The Agency Profitability Problem:</h2>
+            <ul>
+                <li>Your team spends 60%+ of their time on repetitive content tasks (social posts, blog drafts, ad variants)</li>
+                <li>Content bottlenecks limit how many clients you can serve profitably</li>
+                <li>Hiring more writers cuts into margins without proportional revenue gains</li>
+                <li>Clients demand more content volume, but your capacity is maxed out</li>
+                <li>Your best strategists are stuck writing first drafts instead of doing high-value work</li>
+            </ul>
+        </section>
+        
+        <section class="solution-section">
+            <h2>What You Get With ContentFlow</h2>
+            
+            <div class="deliverables">
+                <h3>Unlimited Content Generation Across All Client Accounts:</h3>
+                <ul>
+                    <li>Social media posts (LinkedIn, Facebook, Instagram, Twitter)</li>
+                    <li>Blog articles and website copy (500-2000 words)</li>
+                    <li>Ad copy and variants (Google, Facebook, LinkedIn ads)</li>
+                    <li>Email sequences and newsletter content</li>
+                    <li>Product descriptions and landing page copy</li>
+                    <li>4-hour<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_50" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_50" style="color:#fff">email</a></div>

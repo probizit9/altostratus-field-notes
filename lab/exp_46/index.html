@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אוטומציה חכמה לעסקים רוחניים ואנרגטיים | חסכו זמן ותגדילו הכנסות</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            color: #1a365d;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .subheadline {
+            font-size: 1.3em;
+            color: #4a5568;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: #6b46c1;
+            font-weight: 600;
+        }
+        
+        .pain-section {
+            background: #fff5f5;
+            border-right: 5px solid #fc8181;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .pain-section h2 {
+            color: #c53030;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .pain-section ul {
+            list-style: none;
+            padding-right: 0;
+        }
+        
+        .pain-section li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #2d3748;
+        }
+        
+        .pain-section li:before {
+            content: "✗";
+            position: absolute;
+            right: 0;
+            color: #e53e3e;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .solution-section {
+            background: white;
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        
+        .solution-section h2 {
+            color: #1a365d;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        
+        .deliverables {
+            margin: 25px 0;
+        }
+        
+        .deliverable-item {
+            background: #f0fff4;
+            border-right: 4px solid #48bb78;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        
+        .deliverable-item h3 {
+            color: #22543d;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+        
+        .deliverable-item p {
+            color: #2d3748;
+            font-size: 0.95em;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .pricing-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 25px 0;
+            text-align: right;
+        }
+        
+        .price-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .price-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .price-amount {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fef5e7;
+            margin: 10px 0;
+        }
+        
+        .price-item ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .price-item li {
+            padding: 5px 0;
+            font-size: 0.95em;
+        }
+        
+        .offer-box {
+            background: #fffbeb;
+            border: 3px dashed #d69e2e;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .offer-box h2 {
+            color: #744210;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .offer-box p {
+            font-size: 1.1em;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .offer-highlight {
+            background: #f6ad55;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        
+        .cta-section {
+            background: white;
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: #1a365d;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-form {
+            max-width: 450px;
+            margin: 25px auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(72, 187, 120, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(72, 187, 120, 0.4);
+        }
+        
+        .trust-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .trust-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .trust-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .trust-item h3 {
+            color: #2d3748;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .trust-item p {
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.7em;
+            }
+            
+            .subheadline {
+                font-size: 1.1em;
+            }
+            
+            .solution-section,
+            .cta-section,
+            .pricing-section {
+                padding: 25px 20px;
+            }
+            
+            .price-amount {
+                font-size: 1.6em;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+<meta name="description" content="B2B AI automation for spiritual/wellness businesses (Hebrew market): chatbots, booking systems, client nurture workflows"></head>
+<body>
+    <div class="container">
+        <header>
+            <h1>הפסיקו לאבד לקוחות בגלל תיאום פגישות ידני</h1>
+            <p class="subheadline">אוטומציה חכמה בעברית לעסקים רוחניים ואנרגטיים - <span class="highlight">פנו את הזמן לעבודה הרוחנית שלכם</span></p>
+        </header>
+
+        <div class="pain-section">
+            <h2>האם זה מוכר לכם?</h2>
+            <ul>
+                <li>משחקי טלפון אינסופיים לתיאום פגישות - לקוחות נעלמים באמצע</li>
+                <li>פספוס הזדמנויות בגלל תגובה איטית להודעות בלילה או בשבתות</li>
+                <li>זמן יקר שמבוזבז על שאלות חוזרות במקום על טיפולים<div style="position:sticky;bottom:0;background:#00AFA9;color:#fff;padding:14px;text-align:center;font-weight:700;font-size:17px">Interested? <a href="https://t.me/altostratus_consult_bot?start=exp_46" style="color:#fff;text-decoration:underline">Message us on Telegram →</a> &nbsp; or &nbsp; <a href="mailto:altos@yhabani.com?subject=exp_46" style="color:#fff">email</a></div>
