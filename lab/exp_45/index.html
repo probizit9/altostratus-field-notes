@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>חישוב שנה אישית נומרולוגיה 2025 | גימטריה עברית ומספרים של מלאכים</title>
-    <meta name="description" content="מחשבון נומרולוגי לחישוב שנה אישית 2025 עם גימטריה עברית. גלה את משמעות מספרים של מלאכים בעברית והאותיות העבריות המקבילות לשנתך האישית.">
+    <meta name="description" content="מחשבון נומרולוגיה לחישוב השנה האישית שלך ל-2025 בגימטריה עברית. גלה את משמעות מספרים של מלאכים, האותיות העבריות המקבילות והמסר הרוחני שלך לשנה הקרובה.">
+    <meta name="keywords" content="מספרים של מלאכים, חישוב שנה אישית נומרולוגיה, משמעות מספרים בעברית, גימטריה עברית, נומרולוגיה 2025">
+    <link rel="canonical" href="https://sod-hagoralot.com/hebrew-numerology-calculator">
     <style>
         * {
             margin: 0;
@@ -12,150 +14,168 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
             color: #e0e0e0;
             line-height: 1.8;
+            padding: 20px;
             font-size: 18px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            padding: 40px 0;
-            text-align: center;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
         }
         h1 {
+            color: #00AFA9;
             font-size: 2em;
-            color: #ffffff;
-            margin-bottom: 20px;
-            line-height: 1.4;
+            margin-bottom: 30px;
+            line-height: 1.3;
         }
         h2 {
-            font-size: 1.6em;
             color: #00AFA9;
-            margin: 50px 0 25px 0;
+            font-size: 1.5em;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
         h3 {
-            font-size: 1.3em;
             color: #00AFA9;
-            margin: 30px 0 15px 0;
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 15px;
         }
         p {
             margin-bottom: 20px;
         }
-        .intro {
-            background-color: #242424;
+        .calculator {
+            background: #252525;
             padding: 30px;
-            border-radius: 12px;
-            margin: 30px 0;
-            border-right: 4px solid #00AFA9;
-        }
-        .calculator-section {
-            background-color: #242424;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 30px 0;
-        }
-        .step {
-            background-color: #2a2a2a;
-            padding: 20px;
-            margin: 15px 0;
             border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #00AFA9;
         }
-        .example {
-            background-color: #1f3a39;
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00AFA9;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background: #0a0a0a;
+            color: #e0e0e0;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            background: #00AFA9;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #00c9c1;
+        }
+        .result {
+            margin-top: 25px;
             padding: 20px;
-            border-radius: 8px;
+            background: #0a0a0a;
+            border-radius: 4px;
+            display: none;
+        }
+        .result.show {
+            display: block;
+        }
+        .result-number {
+            font-size: 3em;
+            color: #00AFA9;
+            text-align: center;
             margin: 20px 0;
-            border: 1px solid #00AFA9;
+        }
+        .hebrew-letter {
+            font-size: 2.5em;
+            text-align: center;
+            margin: 15px 0;
+            color: #00AFA9;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 25px 0;
-            background-color: #242424;
-            border-radius: 8px;
-            overflow: hidden;
+            background: #252525;
         }
         th, td {
             padding: 15px;
             text-align: center;
-            border-bottom: 1px solid #333;
+            border: 1px solid #444;
         }
         th {
-            background-color: #00AFA9;
-            color: #1a1a1a;
+            background: #00AFA9;
+            color: #0a0a0a;
             font-weight: bold;
         }
         .faq {
-            margin: 50px 0;
+            margin-top: 40px;
         }
         .faq-item {
-            background-color: #242424;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 8px;
+            margin-bottom: 30px;
+            background: #252525;
+            padding: 20px;
+            border-radius: 4px;
         }
         .faq-question {
-            font-size: 1.2em;
-            color: #00AFA9;
-            margin-bottom: 15px;
             font-weight: bold;
-        }
-        .cta {
-            text-align: center;
-            margin: 50px 0;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #1f3a39 0%, #242424 100%);
-            border-radius: 12px;
-            border: 2px solid #00AFA9;
+            color: #00AFA9;
+            margin-bottom: 10px;
         }
         .cta-button {
-            display: inline-block;
-            background-color: #00AFA9;
-            color: #1a1a1a;
-            padding: 18px 40px;
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+            background: #00AFA9;
+            color: #0a0a0a;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: bold;
-            margin-top: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0, 175, 169, 0.4);
-        }
-        .hebrew-letters {
-            font-size: 2em;
-            color: #00AFA9;
-            text-align: center;
-            margin: 10px 0;
+            background: #00c9c1;
         }
         ul {
-            margin: 20px 0 20px 40px;
+            margin: 20px 0 20px 30px;
         }
         li {
-            margin: 10px 0;
+            margin-bottom: 10px;
         }
         @media (max-width: 600px) {
-            body {
-                font-size: 16px;
+            .container {
+                padding: 20px;
             }
             h1 {
                 font-size: 1.6em;
             }
             h2 {
-                font-size: 1.4em;
+                font-size: 1.3em;
             }
-            .container {
-                padding: 15px;
-            }
-            .intro, .calculator-section, .cta {
-                padding: 20px;
+            body {
+                font-size: 16px;
             }
         }
     </style>
@@ -169,7 +189,7 @@
                 "name": "איך מחשבים שנה אישית בנומרולוגיה ל-2025?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "לחישוב שנה אישית ל-2025, יש לחבר את יום ולחודש הלידה שלך (בספרות) עם 2025. לדוגמה: אם נולדת ב-15 במרץ, מחברים 1+5+3+2+0+2+5=18, ואז 1+8=9. השנה האישית שלך היא 9. כל מספר בין 1-9 מתאים לאות עברית ומייצג אנרגיה שונה לשנה."
+                    "text": "לחישוב השנה האישית ל-2025, יש לחבר את יום ולידתך + חודש לידתך + 2025 (9). לדוגמה: מי שנולד ב-15 במרץ יחשב: 1+5=6, 3 (מרץ), 6+3+9=18, ואז 1+8=9. השנה האישית היא 9. כל ספרה מייצגת אנרגיה שונה ומתקשרת לאות עברית."
                 }
             },
             {
@@ -177,15 +197,15 @@
                 "name": "מה המשמעות של מספרים של מלאכים בגימטריה עברית?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "מספרים של מלאכים הם רצפים חוזרים כמו 111, 222, 444 שנחשבים להודעות רוחניות. בגימטריה עברית, כל מספר מתאים לאות עברית עם משמעות עמוקה. לדוגמה: 1=א (אלף - התחלה), 2=ב (בית - בניין), 3=ג (גימל - תנועה). הקשר בין נומרולוגיה מערבית לגימטריה עברית מעניק עומק נוסף להבנת המספרים."
+                    "text": "מספרים של מלאכים הם רצפים מספריים חוזרים שנושאים מסר רוחני. בגימטריה עברית, כל מספר מתקשר לאות עברית עם משמעות סמלית: 1=א' (התחלה, מנהיגות), 2=ב' (שותפות, דואליות), 3=ג' (יצירתיות, ביטוי), וכן הלאה. השילוב בין הנומרולוגיה המערבית לחכמת הגימטריה מעמיק את ההבנה."
                 }
             },
             {
                 "@type": "Question",
-                "name": "מה ההבדל בין גימטריה עברית לנומרולוגיה מערבית?",
+                "name": "מהי משמעות האותיות העבריות במספרים?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "נומרולוגיה מערבית מבוססת על המספרים 1-9 ומשמעויותיהם האוניברסליות. גימטריה עברית מתבססת על 22 האותיות העבריות שלכל אחת ערך מספרי ומשמעות רוחנית עמוקה הקשורה לקבלה. שילוב שני הגישות מאפשר הבנה רב-ממדית של המספרים בחיינו ושל השנה האישית שלנו."
+                    "text": "כל אות בעברית נושאת ערך מספרי וסמלי: א'=1 (אחדות, מנהיגות), ב'=2 (בית, שותפות), ג'=3 (גמול, יצירתיות), ד'=4 (דלת, יציבות), ה'=5 (חלון, שינוי), ו'=6 (וו, חיבור), ז'=7 (זמן, רוחניות), ח'=8 (חיים, שפע), ט'=9 (טוב, השלמה). הגימטריה משלבת את הערכים המספריים עם המשמעות הסמלית."
                 }
             }
         ]
@@ -195,31 +215,29 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "חישוב שנה אישית נומרולוגיה 2025 | גימטריה עברית ומספרים של מלאכים",
-        "description": "מדריך מקיף לחישוב שנה אישית ב-2025 עם גימטריה עברית, כולל משמעות מספרים של מלאכים והאותיות העבריות המקבילות",
+        "headline": "חישוב שנה אישית נומרולוגיה 2025 בגימטריה עברית",
+        "description": "מדריך מקיף לחישוב השנה האישית שלך ל-2025, משמעות מספרים של מלאכים והקשר לאותיות העבריות בגימטריה",
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-01",
         "author": {
             "@type": "Organization",
             "name": "סוד הגורלות"
-        },
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15"
+        }
     }
     </script>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>איך מחשבים שנה אישית בנומרולוגיה ל-2025 עם גימטריה עברית?</h1>
-        </header>
+        <h1>איך מחשבים את השנה האישית שלי ל-2025 בנומרולוגיה עברית?</h1>
+        
+        <p>השנה האישית בנומרולוגיה מגלה את האנרגיה והמגמות שיאפיינו אותך לאורך 2025. בניגוד לחישובים מערביים גרידא, הגישה העברית משלבת את חכמת הגימטריה - כל מספר מתקשר לאות עברית ספציפית עם משמעות רוחנית עמוקה.</p>
 
-        <div class="intro">
-            <p>שנה אישית בנומרולוגיה היא מספר בין 1-9 שמייצג את האנרגיה והנושאים המרכזיים שילוו אותך לאורך השנה הקלנדרית. חישוב השנה האישית ל-2025 מתבצע על ידי חיבור תאריך הלידה שלך עם השנה הנוכחית. כשמשלבים את זה עם גימטריה עברית, אנחנו מקבלים גם את האות העברית המקבילה ומשמעותها הרוחנית העמוקה.</p>
-            <p>הקשר בין מספרים של מלאכים (כמו 111, 222, 333) לבין גימטריה עברית מעניק עומק נוסף להבנת המסרים הרוחניים שמגיעים אלינו דרך מספרים בחיי היומיום.</p>
-        </div>
-
-        <div class="calculator-section">
-            <h2>איך מחשבים את השנה האישית ל-2025?</h2>
-            
-            <div class="step">
-                <h3>שלב 1: חבר את מרכיבי תאריך הלידה</h3>
-                <p>קח את היום והחודש שבו נולדת (בלבד, לא שנת הל
+        <div class="calculator">
+            <h2>מחשבון שנה אישית 2025</h2>
+            <div class="input-group">
+                <label for="day">יום לידה (1-31):</label>
+                <input type="number" id="day" min="1" max="31" placeholder="15">
+            </div>
+            <div class="input-group">
+                <label for="month">חודש לידה (1-12):</label>
+                <input
