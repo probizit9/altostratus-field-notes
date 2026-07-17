@@ -4,215 +4,231 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>גימטריה שם תינוק - מדריך מלא לבחירת שם לפי גימטריה</title>
-<meta name="description" content="מדריך מקיף לבחירת שם תינוק לפי גימטריה עברית. למדו כיצד לחשב ערכי גימטריה, משמעויות מספרים, ועקרונות לבחירת שם בהתאם למסורת היהודית.">
+<meta name="description" content="איך בוחרים שם לתינוק לפי גימטריה? מדריך מקיף לחישוב ערך גימטרי, משמעות מספרית של שמות עבריים, וכלים מעשיים להורים המחפשים שם בעל משמעות רוחנית.">
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: #1a1a1a;
-  color: #e0e0e0;
-  line-height: 1.7;
-  padding: 20px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+background-color: #1a1a1a;
+color: #e0e0e0;
+line-height: 1.7;
+padding: 20px;
 }
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #242424;
-  padding: 30px;
-  border-radius: 8px;
+max-width: 800px;
+margin: 0 auto;
+}
+header {
+margin-bottom: 40px;
+padding-bottom: 20px;
+border-bottom: 2px solid #00AFA9;
 }
 h1 {
-  font-size: 2rem;
-  color: #00AFA9;
-  margin-bottom: 30px;
-  line-height: 1.3;
+font-size: clamp(28px, 5vw, 42px);
+color: #ffffff;
+margin-bottom: 20px;
+line-height: 1.3;
 }
 h2 {
-  font-size: 1.5rem;
-  color: #00AFA9;
-  margin-top: 40px;
-  margin-bottom: 20px;
+font-size: clamp(22px, 4vw, 32px);
+color: #00AFA9;
+margin-top: 50px;
+margin-bottom: 20px;
 }
 h3 {
-  font-size: 1.2rem;
-  color: #00AFA9;
-  margin-top: 25px;
-  margin-bottom: 15px;
+font-size: clamp(18px, 3.5vw, 24px);
+color: #ffffff;
+margin-top: 30px;
+margin-bottom: 15px;
 }
 p {
-  margin-bottom: 20px;
+margin-bottom: 20px;
+font-size: clamp(16px, 2.5vw, 18px);
 }
 ul, ol {
-  margin: 20px 0 20px 30px;
+margin-right: 25px;
+margin-bottom: 20px;
 }
 li {
-  margin-bottom: 10px;
+margin-bottom: 12px;
+font-size: clamp(16px, 2.5vw, 18px);
 }
 .cta-button {
-  display: inline-block;
-  background: #00AFA9;
-  color: #1a1a1a;
-  padding: 16px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 30px 0;
-  transition: background 0.3s;
+display: inline-block;
+background-color: #00AFA9;
+color: #ffffff;
+padding: 18px 40px;
+text-decoration: none;
+border-radius: 8px;
+font-size: 20px;
+font-weight: bold;
+margin: 40px 0;
+text-align: center;
+transition: background-color 0.3s;
 }
 .cta-button:hover {
-  background: #00c9c1;
+background-color: #008c84;
+}
+.faq {
+margin-top: 50px;
 }
 .faq-item {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #2a2a2a;
-  border-radius: 6px;
+background-color: #252525;
+padding: 25px;
+margin-bottom: 20px;
+border-radius: 8px;
+border-right: 4px solid #00AFA9;
 }
 .faq-question {
-  font-weight: bold;
-  color: #00AFA9;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+font-size: clamp(18px, 3vw, 22px);
+color: #00AFA9;
+margin-bottom: 12px;
+font-weight: bold;
 }
 .faq-answer {
-  margin-top: 10px;
+color: #d0d0d0;
 }
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background: #2a2a2a;
+width: 100%;
+border-collapse: collapse;
+margin: 30px 0;
+background-color: #252525;
 }
 th, td {
-  padding: 12px;
-  border: 1px solid #3a3a3a;
-  text-align: center;
+padding: 15px;
+text-align: right;
+border-bottom: 1px solid #333;
 }
 th {
-  background: #333;
-  color: #00AFA9;
+background-color: #2a2a2a;
+color: #00AFA9;
+font-weight: bold;
 }
-.highlight {
-  background: #2a2a2a;
-  padding: 20px;
-  border-right: 4px solid #00AFA9;
-  margin: 25px 0;
+.example-box {
+background-color: #252525;
+padding: 25px;
+border-radius: 8px;
+margin: 30px 0;
+border-right: 4px solid #00AFA9;
 }
-@media (max-width: 600px) {
-  .container {
-    padding: 20px;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  table {
-    font-size: 0.9rem;
-  }
-  th, td {
-    padding: 8px;
-  }
+footer {
+margin-top: 60px;
+padding-top: 30px;
+border-top: 1px solid #333;
+text-align: center;
+color: #888;
+font-size: 14px;
 }
 </style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "איך מחשבים גימטריה של שם?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "חישוב גימטריה נעשה על ידי הצבת ערך מספרי לכל אות עברית: א=1, ב=2, ג=3, ד=4, ה=5, ו=6, ז=7, ח=8, ט=9, י=10, כ/ך=20, ל=30, מ/ם=40, ן/נ=50, ס=60, ע=70, פ/ף=80, צ/ץ=90, ק=100, ר=200, ש=300, ת=400. לדוגמה, השם 'דוד' מחושב כך: ד(4) + ו(6) + ד(4) = 14."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "מה המשמעות של מספר 26 בגימטריה?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "המספר 26 הוא ערך הגימטריה של שם ה' הקדוש (י-ה-ו-ה): י(10) + ה(5) + ו(6) + ה(5) = 26. זהו מספר בעל משמעות רוחנית עמוקה במסורת היהודית, המייצג קשר לאלוהות, שלמות רוחנית וברכה."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "האם יש חשיבות לשם המשפחה בגימטריה?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "כן, חלק מההורים בוחרים לבדוק את הגימטריה של השם הפרטי ביחד עם שם המשפחה כדי לקבל תמונה מלאה יותר. אחרים מתמקדים רק בשם הפרטי, או בשילוב שם פרטי ושם האם/אב (לפי המסורת של פלוני בן/בת פלונית). אין כלל אחד, והגישה משתנה בין קהילות ומשפחות שונות."
-      }
-    }
-  ]
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "איך מחשבים גימטריה של שם?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "כל אות עברית מקבלת ערך מספרי: א'=1, ב'=2, ג'=3, ד'=4, ה'=5, ו'=6, ז'=7, ח'=8, ט'=9, י'=10, כ'=20, ל'=30, ם/מ=40, ן/נ=50, ס'=60, ע'=70, ף/פ=80, ץ/צ=90, ק'=100, ר'=200, ש'=300, ת'=400. לדוגמה, השם דוד מחושב כך: ד'(4) + ו'(6) + ד'(4) = 14. השם נועה: נ'(50) + ו'(6) + ע'(70) + ה'(5) = 131."
+}
+},
+{
+"@type": "Question",
+"name": "מה נחשב לגימטריה טובה לשם תינוק?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "אין ערך גימטרי 'טוב' או 'רע' בפני עצמו. הורים בוחרים לפי מספר גישות: התאמה לערך גימטרי של מילים חיוביות כמו חיים (68), אהבה (13), אור (207) או ברכה (227); מספרים בעלי משמעות במסורת היהודית כמו 18 (חי), 26 (יהוה), 613 (מצוות); או התאמה לשמות בני המשפחה. העיקר הוא שהשם מתחבר רגשית ורוחנית להורים."
+}
+},
+{
+"@type": "Question",
+"name": "האם צריך להתאים את הגימטריה של השם הפרטי לשם המשפחה?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "זו שאלה אישית שאין עליה תשובה אחת. חלק מההורים בוחרים לחשב את הגימטריה של השם המלא (פרטי + משפחה) ומחפשים משמעות משולבת. אחרים מתמקדים רק בשם הפרטי, שכן הוא הייחודי לילד. גישה נוספת היא לבדוק התאמה בין ערכי הגימטריה של שני ההורים לבין השם החדש. אין כלל מחייב - כל משפחה עושה זאת לפי האינטואיציה והמסורת המשפחתית שלה."
+}
+}
+]
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "גימטריה שם תינוק - מדריך מלא לבחירת שם לפי גימטריה",
-  "description": "מדריך מקיף לבחירת שם תינוק לפי גימטריה עברית. למדו כיצד לחשב ערכי גימטריה, משמעויות מספרים, ועקרונות לבחירת שם בהתאם למסורת היהודית.",
-  "inLanguage": "he",
-  "datePublished": "2025-01-20",
-  "dateModified": "2025-01-20",
-  "author": {
-    "@type": "Organization",
-    "name": "Sod HaGoralot"
-  }
+"@context": "https://schema.org",
+"@type": "Article",
+"headline": "גימטריה שם תינוק - מדריך מלא לבחירת שם לפי גימטריה",
+"description": "מדריך מקיף לחישוב ערך גימטרי של שמות עבריים ובחירת שם לתינוק לפי גימטריה",
+"author": {
+"@type": "Organization",
+"name": "סוד הגורלות"
+},
+"datePublished": "2024-01-15",
+"dateModified": "2024-01-15"
 }
 </script>
 </head>
 <body>
 <div class="container">
+<header>
 <h1>איך בוחרים שם לתינוק לפי גימטריה?</h1>
+<p style="font-size: 18px; color: #b0b0b0;">מדריך מקיף להורים המחפשים שם עברי בעל משמעות רוחנית ומספרית</p>
+</header>
 
-<p>בחירת שם לתינוק היא אחת ההחלטות המשמעותיות ביותר עבור הורים, ורבים מחפשים דרכים להעניק לילדם שם בעל משמעות רוחנית עמוקה. גימטריה – שיטת חישוב מספרית של אותיות עבריות – היא כלי מסורתי שעוזר להורים לבחור שם המתאים לערכים המשפחתיים ולמשמעות הרוחנית שהם מבקשים להעניק.</p>
+<main>
+<p>בחירת שם לתינוק היא אחת ההחלטות המשמעותיות ביותר שהורים מקבלים. הרבה זוגות בישראל בוחרים להיעזר בגימטריה - השיטה המסורתית לחישוב ערכים מספריים של אותיות עבריות - כדי למצוא שם שלא רק נשמע יפה, אלא גם נושא משמעות רוחנית עמוקה.</p>
 
-<p>במדריך זה תמצאו הסבר מפורט על אופן החישוב, משמעויות מספריות נפוצות, ועקרונות מעשיים לבחירת שם תינוק לפי גימטריה.</p>
+<p>גימטריה היא כלי עתיק יומין שמקורו בקבלה ובמיסטיקה היהודית. השיטה מבוססת על העיקרון שלכל אות עברית יש ערך מספרי, וכאשר מחשבים את הערך המספרי של מילה או שם, ניתן לגלות קשרים נסתרים למילים אחרות בעלות אותו ערך, ולחשוף משמעויות נוספות.</p>
 
-<h2>מהי גימטריה ומדוע היא רלוונטית לבחירת שם?</h2>
+<h2>איך עובדת שיטת הגימטריה?</h2>
 
-<p>גימטריה היא שיטה עתיקה בה כל אות בעברית מקבלת ערך מספרי. המסורת היהודית רואה באותיות העבריות יותר מסתם סימנים לשוניים – הן נושאות אנרגיה רוחנית ומשמעות עמוקה. כאשר אנו מחשבים את הערך המספרי של שם, אנו יכולים לגלות קשרים למילים, מושגים וערכים אחרים בעלי אותו ערך גימטרי.</p>
-
-<p>הורים רבים מאמינים שהשם שהם נותנים לילדם משפיע על אישיותו, גורלו והדרך שבה הוא יתפתח בחיים. בחירת שם לפי גימטריה מאפשרת להתחבר למסורת עתיקה ולהעניק לשם משמעות נוספת מעבר לצלילו או לנושא הזיכרון המשפחתי.</p>
-
-<h2>טבלת ערכי האותיות בגימטריה</h2>
+<p>בגימטריה הפשוטה (הנפוצה ביותר), כל אות מקבלת ערך מספרי לפי סדרה זו:</p>
 
 <table>
-<thead>
 <tr>
-<th>אות</th>
-<th>ערך</th>
-<th>אות</th>
-<th>ערך</th>
-<th>אות</th>
+<th>אותיות</th>
 <th>ערך</th>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>א</td>
 <td>1</td>
-<td>י</td>
-<td>10</td>
-<td>ק</td>
-<td>100</td>
 </tr>
 <tr>
 <td>ב</td>
 <td>2</td>
-<td>כ/ך</td>
-<td>20</td>
-<td>ר</td>
-<td>200</td>
 </tr>
 <tr>
 <td>ג</td>
 <td>3</td>
+</tr>
+<tr>
+<td>ד</td>
+<td>4</td>
+</tr>
+<tr>
+<td>ה</td>
+<td>5</td>
+</tr>
+<tr>
+<td>ו</td>
+<td>6</td>
+</tr>
+<tr>
+<td>ז</td>
+<td>7</td>
+</tr>
+<tr>
+<td>ח</td>
+<td>8</td>
+</tr>
+<tr>
+<td>ט</td>
+<td>9</td>
+</tr>
+<tr>
+<td>י</td>
+<td>10</td>
+</tr>
