@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>קריאה אסטרולוגית אישית בעברית - תוכן רוחני מותאם אישית עם בינה מלאכותית</title>
-<meta name="description" content="קבלו קריאות אסטרולוגיה, טארוט ותוכן רוחני מותאם אישית בעברית באמצעות בינה מלאכותית. מנוי חודשי למזל יומי, ניתוח מפת לידה וייעוץ רוחני מקצועי.">
+<title>קריאה אסטרולוגית אישית בעברית - מנוי לתכנים רוחניים מבוססי AI</title>
+<meta name="description" content="קבל קריאות טארוט אסטרולוגיה ותכנים רוחניים מותאמים אישית בעברית באמצעות בינה מלאכותית. מנוי חודשי למזלות, קריאות יומיות ויעוץ רוחני מקצועי.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://t.me/altostratus_consult_bot?start=exp_35">
 <style>
 * {
 margin: 0;
@@ -16,69 +18,56 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 background-color: #0a0a0a;
 color: #e0e0e0;
 line-height: 1.7;
-padding: 20px;
+font-size: 18px;
 }
 .container {
 max-width: 800px;
 margin: 0 auto;
-}
-header {
-padding: 40px 0 60px;
-text-align: center;
+padding: 24px 20px;
 }
 h1 {
 font-size: 2rem;
+margin: 40px 0 32px;
 color: #ffffff;
-margin-bottom: 20px;
-font-weight: 700;
 line-height: 1.3;
-}
-@media (min-width: 768px) {
-h1 {
-font-size: 2.5rem;
-}
-}
-.intro {
-font-size: 1.1rem;
-color: #b0b0b0;
-margin-bottom: 50px;
+font-weight: 700;
 }
 h2 {
-font-size: 1.6rem;
+font-size: 1.5rem;
+margin: 48px 0 24px;
 color: #00AFA9;
-margin: 50px 0 25px;
 font-weight: 600;
 }
 h3 {
-font-size: 1.3rem;
+font-size: 1.25rem;
+margin: 32px 0 16px;
 color: #ffffff;
-margin: 30px 0 15px;
 font-weight: 600;
 }
 p {
 margin-bottom: 20px;
-color: #c0c0c0;
+color: #d0d0d0;
 }
 ul, ol {
-margin: 20px 0 20px 30px;
-color: #c0c0c0;
+margin: 20px 0 20px 24px;
+color: #d0d0d0;
 }
 li {
 margin-bottom: 12px;
 }
 .highlight {
-background-color: #1a1a1a;
+background-color: rgba(0, 175, 169, 0.15);
 border-right: 4px solid #00AFA9;
-padding: 25px;
-margin: 30px 0;
-border-radius: 8px;
+padding: 20px 24px;
+margin: 32px 0;
+border-radius: 4px;
 }
-.offer {
-background: linear-gradient(135deg, #1a1a1a 0%, #0f2626 100%);
+.offer-section {
+background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
 border: 2px solid #00AFA9;
-border-radius: 12px;
-padding: 40px;
-margin: 50px 0;
+border-radius: 8px;
+padding: 32px 28px;
+margin: 48px 0;
 text-align: center;
 }
 .price {
@@ -87,75 +76,54 @@ color: #00AFA9;
 font-weight: 700;
 margin: 20px 0;
 }
-.price-period {
-font-size: 1.2rem;
-color: #b0b0b0;
-}
-.cta {
+.cta-button {
 display: inline-block;
 background-color: #00AFA9;
 color: #0a0a0a;
-padding: 18px 45px;
+padding: 16px 40px;
 text-decoration: none;
-border-radius: 8px;
+border-radius: 6px;
 font-weight: 700;
 font-size: 1.1rem;
-margin-top: 25px;
+margin-top: 24px;
 transition: transform 0.2s, box-shadow 0.2s;
 }
-.cta:hover {
+.cta-button:hover {
 transform: translateY(-2px);
-box-shadow: 0 10px 25px rgba(0, 175, 169, 0.3);
-}
-.faq {
-margin: 50px 0;
+box-shadow: 0 8px 20px rgba(0, 175, 169, 0.4);
 }
 .faq-item {
-background-color: #1a1a1a;
-padding: 25px;
-margin-bottom: 20px;
-border-radius: 8px;
-border-right: 3px solid #00AFA9;
+margin-bottom: 32px;
+padding-bottom: 24px;
+border-bottom: 1px solid #2a2a2a;
+}
+.faq-item:last-child {
+border-bottom: none;
 }
 .faq-question {
-font-size: 1.2rem;
-color: #00AFA9;
 font-weight: 600;
+color: #ffffff;
 margin-bottom: 12px;
-}
-.faq-answer {
-color: #c0c0c0;
-line-height: 1.7;
-}
-.features {
-display: grid;
-gap: 20px;
-margin: 30px 0;
-}
-@media (min-width: 768px) {
-.features {
-grid-template-columns: repeat(2, 1fr);
-}
-}
-.feature-card {
-background-color: #1a1a1a;
-padding: 25px;
-border-radius: 8px;
-border-top: 3px solid #00AFA9;
-}
-.feature-title {
-color: #00AFA9;
-font-weight: 600;
-margin-bottom: 10px;
 font-size: 1.1rem;
 }
-footer {
-text-align: center;
-margin-top: 80px;
-padding-top: 40px;
-border-top: 1px solid #2a2a2a;
-color: #808080;
-font-size: 0.9rem;
+.faq-answer {
+color: #d0d0d0;
+}
+@media (max-width: 600px) {
+h1 {
+font-size: 1.6rem;
+margin: 24px 0 24px;
+}
+h2 {
+font-size: 1.3rem;
+margin: 36px 0 20px;
+}
+.price {
+font-size: 2rem;
+}
+.container {
+padding: 16px 16px;
+}
 }
 </style>
 <script type="application/ld+json">
@@ -165,26 +133,26 @@ font-size: 0.9rem;
 "mainEntity": [
 {
 "@type": "Question",
-"name": "האם קריאה אסטרולוגית בבינה מלאכותית מדויקת?",
+"name": "מה כולל מנוי לתכנים רוחניים בעברית?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "קריאה אסטרולוגית מבוססת בינה מלאכותית משלבת ידע אסטרולוגי מסורתי עם יכולות ניתוח מתקדמות. המערכת מנתחת את מפת הלידה שלך על פי עקרונות אסטרולוגיה קלאסית, כולל מיקום כוכבי לכת, בתים אסטרולוגיים והיבטים ביניהם. היתרון של בינה מלאכותית הוא בעקביות, זמינות 24/7 ויכולת לעבד כמויות גדולות של מידע אסטרולוגי במהירות. עם זאת, חשוב לזכור שאסטרולוגיה היא כלי להבנה עצמית ולא חיזוי מדויק של העתיד."
+"text": "מנוי חודשי כולל קריאות אסטרולוגיה מותאמות אישית לפי תאריך הלידה שלך, קריאות טארוט יומיות ושבועיות, תחזיות מזלות מפורטות, וייעוץ רוחני אישי זמין 24/7. כל התכנים מותאמים בעברית ומבוססים על שילוב של ידע רוחני מסורתי ובינה מלאכותית מתקדמת."
 }
 },
 {
 "@type": "Question",
-"name": "מה כולל מנוי לתוכן רוחני בעברית?",
+"name": "האם קריאות בינה מלאכותית מדויקות כמו אסטרולוג אנושי?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "מנוי לשירות תוכן רוחני בעברית כולל: מזל יומי מותאם אישית לפי מפת הלידה שלך, קריאות טארוט שבועיות המתייחסות לשאלות אישיות, ניתוח מפורט של מפת הלידה האסטרולוגית שלך, תחזיות אסטרולוגיות חודשיות, תובנות בנושאי אהבה, קריירה ורוחניות, וגישה לצ'אט עם מערכת הבינה המלאכותית לשאלות ספציפיות. כל התוכן מסופק בעברית ברמה גבוהה ומותאם לתרבות הישראלית."
+"text": "הבינה המלאכותית מאומנת על מאגר עצום של ידע אסטרולוגי, טארוט וחכמה רוחנית, ומספקת פרשנויות עקביות ומקצועיות. היתרון העיקרי הוא זמינות מיידית, התאמה אישית מלאה וחוסר משוא פנים. עם זאת, התוכן משמש כהכוונה והשראה, והחלטות חשובות תמיד צריכות להתקבל בשיקול דעת אישי."
 }
 },
 {
 "@type": "Question",
-"name": "איך מקבלים קריאת טארוט אישית?",
+"name": "כמה עולה המנוי ואיך מתחילים?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "לאחר ההרשמה למנוי, תוכלו לבקש קריאת טארוט אישית דרך הצ'אט בטלגרם. תתבקשו לנסח שאלה או נושא שמעניין אותכם - זה יכול להיות קריירה, מערכות יחסים, בריאות, החלטות חשובות או כל נושא רוחני אחר. מערכת הבינה המלאכותית תבצע פריסת קלפים ייעודית, תסביר את משמעות כל קלף בהקשר לשאלתך, ותספק פרשנות מקיפה המשלבת את כל הקלפים יחד. תוכלו לקבל מספר קריאות בחודש בהתאם לתכנית המנוי שלכם."
+"text": "מחיר המנוי החודשי הוא 49 ₪. ההרשמה מתבצעת דרך טלגרם, שם תקבל גישה מיידית למערכת. אפשר לבטל בכל עת ללא התחייבות ארוכת טווח."
 }
 }
 ]
@@ -194,25 +162,36 @@ font-size: 0.9rem;
 {
 "@context": "https://schema.org",
 "@type": "Article",
-"headline": "קריאה אסטרולוגית אישית בעברית - תוכן רוחני מותאם אישית עם בינה מלאכותית",
-"description": "מדריך מקיף לשירותי אסטרולוגיה, טארוט ותוכן רוחני מותאם אישית בעברית באמצעות בינה מלאכותית",
-"inLanguage": "he",
+"headline": "קריאה אסטרולוגית אישית בעברית - מנוי לתכנים רוחניים מבוססי AI",
+"description": "מדריך מקיף למנוי תכנים רוחניים בעברית: אסטרולוגיה, טארוט וקריאות אישיות באמצעות בינה מלאכותית",
 "author": {
 "@type": "Organization",
-"name": "Altostratus Consult"
+"name": "Altostratus Spiritual Consulting"
 },
 "datePublished": "2025-01-15",
-"dateModified": "2025-01-15"
+"dateModified": "2025-01-15",
+"inLanguage": "he"
 }
 </script>
 </head>
 <body>
 <div class="container">
-<header>
-<h1>איך מקבלים קריאה אסטרולוגית אישית בעברית?</h1>
-<p class="intro">מדריך מקיף לשירות תוכן רוחני מותאם אישית המשלב אסטרולוגיה, טארוט ותובנות רוחניות בעברית באמצעות טכנולוגיית בינה מלאכותית מתקדמת</p>
-</header>
+<h1>איך מקבלים קריאות אסטרולוגיה וטארוט מותאמות אישית בעברית?</h1>
+<p>קריאות רוחניות אישיות בעברית זמינות כעת דרך מנוי חודשי המשלב בינה מלאכותית מתקדמת עם ידע אסטרולוגי מסורתי. המערכת מספקת תחזיות מזלות, קריאות טארוט ויעוץ רוחני מותאם במיוחד עבורך - 24 שעות ביממה.</p>
 
-<main>
-<section>
-<p>קריאה אסטרולוגית אישית בעברית מאפשרת לכם לקבל תובנות עמוקות על עצמכם, המסלול החיים שלכם ואתגרים עתידיים - הכל בשפה העברית ומותאם לתרבות המקומית. בעזרת טכנולוגיית בינה מלאכותית מתקדמת, כעת ניתן לקבל ניתוח מקצועי של מפת הלידה האסטרולוגית שלכם, קריאות טארוט יומיות ותחזיות מזל מותאמות אישית -
+<p>בעוד שבעבר היה צורך לתאם פגישה עם אסטרולוג או קורא טארוט ולשלם מאות שקלים לקריאה אחת, כיום ניתן לקבל הכוונה רוחנית מקצועית בכל רגע, בשפה העברית, ובמחיר סביר.</p>
+
+<h2>מה כולל שירות התכנים הרוחניים</h2>
+
+<p>המנוי מעניק גישה למערכת מקיפה של תכנים רוחניים מותאמים אישית:</p>
+
+<ul>
+<li><strong>קריאות אסטרולוגיה אישיות</strong> - מפת לידה מותאמת לפי תאריख, שעה ומקום הלידה שלך, עם פרשנויות מעמיקות על אישיותך, נקודות חוזק, אתגרים ותחזיות עתידיות</li>
+<li><strong>קריאות טארוט יומיות ושבועיות</strong> - קלפים שנמשכים עבורך באופן אישי עם פרשנות מפורטת לשאלות ספציפיות או להכוונה כללית</li>
+<li><strong>תחזיות מזלות</strong> - תחזית יומית, שבועית וחודשית למזל שלך עם התמקדות בתחומי אהבה, קריירה, בריאות וכסף</li>
+<li><strong>ייעוץ רוחני אינטראקטיבי</strong> - אפשרות לשאול שאלות ספציפיות ולקבל תשובות מבוססות על עקרונות רוחניים וחכמה מסורתית</li>
+<li><strong>תכנים בעברית בלבד</strong> - כל הקריאות, הפרשנויות וההכוונה בשפה עברית ברורה ונגישה</li>
+</ul>
+
+<div class="highlight">
+<p><strong>למי זה מתאים?</strong> השירות מיועד לכל מי שמחפש הכוונה רוחנית, מעוניין להבין טוב יותר את עצמו דרך א
