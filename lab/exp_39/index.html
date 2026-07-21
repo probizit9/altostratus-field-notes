@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>חישוב גימטריה לשם עסק - מדריך מקיף לבחירת שם עסקי מוצלח</title>
-<meta name="description" content="גלה איך לחשב גימטריה לשם עסק ולבחור שם עסקי מוצלח. מדריך מקיף לשימוש בגימטריה עברית לבחירת שם עסק, כולל טיפים מעשיים וחישובים חשובים.">
+<meta name="description" content="גלה כיצד לחשב גימטריה לשם עסק ולבחור שם עסקי בעל ערך נומרולוגי חיובי. מדריך מפורט לשימוש בגימטריה למזל בעסקים עם דוגמאות מעשיות וכלים זמינים.">
 <style>
 * {
   margin: 0;
@@ -12,76 +12,59 @@
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   background-color: #1a1a1a;
   color: #e0e0e0;
-  line-height: 1.8;
+  line-height: 1.7;
   padding: 20px;
+  font-size: 18px;
 }
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
-header {
-  margin: 60px 0 40px;
-}
 h1 {
   font-size: 2rem;
+  margin: 40px 0 30px;
   color: #ffffff;
-  margin-bottom: 20px;
   line-height: 1.3;
 }
 h2 {
   font-size: 1.5rem;
+  margin: 50px 0 20px;
   color: #00AFA9;
-  margin: 50px 0 25px;
 }
 h3 {
   font-size: 1.2rem;
-  color: #ffffff;
   margin: 30px 0 15px;
+  color: #00AFA9;
 }
 p {
   margin-bottom: 20px;
-  color: #d0d0d0;
 }
 ul, ol {
   margin: 20px 0 20px 30px;
 }
 li {
   margin-bottom: 12px;
-  color: #d0d0d0;
 }
-.cta-button {
-  display: inline-block;
-  background-color: #00AFA9;
-  color: #ffffff;
-  padding: 16px 32px;
-  text-decoration: none;
-  border-radius: 8px;
+.intro {
   font-size: 1.1rem;
-  font-weight: 600;
+  color: #b0b0b0;
   margin: 30px 0;
-  transition: background-color 0.3s;
-  text-align: center;
-}
-.cta-button:hover {
-  background-color: #008c85;
-}
-.table-container {
-  overflow-x: auto;
-  margin: 25px 0;
+  padding: 20px;
+  background-color: #242424;
+  border-right: 4px solid #00AFA9;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #252525;
-  border-radius: 8px;
-  overflow: hidden;
+  margin: 30px 0;
+  background-color: #242424;
 }
 th, td {
-  padding: 12px;
+  padding: 15px;
   text-align: right;
   border-bottom: 1px solid #333;
 }
@@ -90,42 +73,63 @@ th {
   color: #00AFA9;
   font-weight: 600;
 }
-.faq-item {
-  margin-bottom: 35px;
+.example-box {
+  background-color: #242424;
   padding: 25px;
-  background-color: #252525;
-  border-radius: 8px;
-  border-right: 4px solid #00AFA9;
-}
-.faq-question {
-  font-size: 1.15rem;
-  color: #ffffff;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-.faq-answer {
-  color: #d0d0d0;
-  line-height: 1.7;
-}
-.highlight-box {
-  background-color: #252525;
-  padding: 25px;
-  border-radius: 8px;
   margin: 30px 0;
-  border-right: 4px solid #00AFA9;
+  border-radius: 8px;
+}
+.cta-button {
+  display: inline-block;
+  background-color: #00AFA9;
+  color: #ffffff;
+  padding: 18px 40px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 40px 0;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+.cta-button:hover {
+  background-color: #008c82;
+}
+.cta-section {
+  text-align: center;
+  margin: 50px 0;
+  padding: 40px 20px;
+  background-color: #242424;
+  border-radius: 8px;
+}
+.faq-item {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+strong {
+  color: #00AFA9;
 }
 @media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
   h1 {
     font-size: 1.6rem;
+    margin: 20px 0 20px;
   }
   h2 {
     font-size: 1.3rem;
   }
-  body {
-    padding: 15px;
+  table {
+    font-size: 0.9rem;
   }
-  .container {
-    padding: 0 10px;
+  th, td {
+    padding: 10px 8px;
   }
 }
 </style>
@@ -139,23 +143,23 @@ th {
       "name": "איך מחשבים גימטריה לשם עסק?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "לחישוב גימטריה לשם עסק, יש להמיר כל אות בשם העסק לערך המספרי שלה (א=1, ב=2, וכן הלאה), ולסכום את כל הערכים. לדוגמה, השם 'ברכה' מחושב כך: ב(2) + ר(200) + כ(20) + ה(5) = 227. רצוי להשוות את התוצאה למילים חיוביות באותה גימטריה ולבחור מספרים הנחשבים למוצלחים בקבלה."
+        "text": "חישוב גימטריה לשם עסק מתבצע על ידי המרת כל אות בשם העסק לערך המספרי שלה לפי הא\"ב העברי. אל\"ף = 1, בי\"ת = 2, גימ\"ל = 3 וכן הלאה עד תי\"ו = 400. לאחר מכן מחברים את כל הערכים המספריים לקבלת הגימטריה הסופית של השם. מספרים מסוימים נחשבים חיוביים במיוחד לעסקים, כגון 26 (שם הוויה), 18 (חי), 72 (חסד), ו-143 (אהבה)."
       }
     },
     {
       "@type": "Question",
-      "name": "מה הקשר בין גימטריה להצלחה עסקית?",
+      "name": "אילו מספרי גימטריה נחשבים מוצלחים לעסקים?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "על פי המסורת הקבלית, לכל מספר יש תדר אנרגטי ומשמעות רוחנית. שם עסק שגימטריה שלו תואמת למילים חיוביות כמו 'הצלחה', 'ברכה' או 'שפע' יכול ליצור תהודה אנרגטית חיובית. יזמים רבים בוחרים שמות עסק לפי גימטריה כחלק מתהליך בחירה רחב יותר הכולל שיקולים שיווקיים, משפטיים וערכיים."
+        "text": "מספרי גימטריה מועדפים לשמות עסקיים כוללים: 26 (יהוה - שם הוויה, מסמל נוכחות אלוהית ושפע), 18 (חי - חיים, סמל לחיוניות והצלחה), 72 (חסד - מעורר ברכה ושפע), 143 (אהבה - מושך לקוחות ומייצר נאמנות), 248 (אברהם - מסמל ברכה עסקית), ו-358 (משיח - שלמות ושגשוג). חשוב לבחור מספר המתאים לתחום העסק ולמטרותיו."
       }
     },
     {
       "@type": "Question",
-      "name": "אילו מספרים נחשבים מוצלחים לשם עסק בגימטריה?",
+      "name": "האם גימטריה באמת משפיעה על הצלחת עסק?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "מספרים נפוצים הנחשבים למוצלחים כוללים: 26 (שם הוי-ה), 72 (שם חסד), 358 (משיח), 378 (שפע), 273 (אברהם), 208 (יצחק), 620 (כתר). מספרים המסתיימים ב-0 או 5 נחשבים גם הם לחיוביים. חשוב לבחור מספר שמתאים לאופי העסק ולערכים שהוא מייצג, ולא רק על פי חישובים מספריים."
+        "text": "גימטריה היא כלי מסורתי יהודי לחיבור בין מילים למשמעויות עמוקות יותר. רבים מיזמים ישראליים משתמשים בגימטריה כחלק מתהליך בחירת שם, יחד עם שיקולים שיווקיים, משפטיים ותרבותיים. אין מחקר מדעי המוכיח השפעה ישירה של גימטריה על הצלחה כלכלית, אך השם העסקי משפיע על תפיסת המותג, וגימטריה יכולה לתת משמעות נוספת ואנרגיה חיובית למייסדים ולעובדים."
       }
     }
   ]
@@ -166,69 +170,42 @@ th {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "חישוב גימטריה לשם עסק - מדריך מקיף לבחירת שם עסקי מוצלח",
-  "description": "מדריך מקיף לשימוש בגימטריה עברית לבחירת שם עסק, כולל שיטות חישוב, מספרים מומלצים וטיפים מעשיים.",
+  "description": "מדריך מפורט לשימוש בגימטריה לבחירת שם עסק, כולל טבלת ערכים, מספרים מומלצים, ודוגמאות מעשיות",
   "inLanguage": "he",
   "author": {
     "@type": "Organization",
-    "name": "Sod HaGoralot"
+    "name": "סוד הגורלות"
   },
-  "datePublished": "2024-01-15",
-  "dateModified": "2024-01-15"
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-01-01"
 }
 </script>
 </head>
 <body>
 <div class="container">
-<header>
-<h1>איך לבחור שם עסק לפי גימטריה שיביא הצלחה ומזל?</h1>
-</header>
+  <h1>איך לחשב גימטריה לשם עסק ולבחור שם עסקי מוצלח?</h1>
+  
+  <div class="intro">
+    <p>בחירת שם עסק היא החלטה משמעותית המשפיעה על המותג, השיווק והזיהוי העסקי לשנים קדימה. רבים מיזמים ישראליים מחפשים לשלב בבחירת השם גם את ממד הגימטריה - השיטה היהודית העתיקה לחיבור בין אותיות למספרים ולמשמעויות עמוקות יותר.</p>
+  </div>
 
-<main>
-<p>בחירת שם לעסק היא החלטה משמעותית המשפיעה על זהות המותג, הצלחתו ואפילו על האנרגיה שהוא מושך. יזמים רבים בישראל מחפשים דרכים לשלב חוכמה עתיקה בהחלטות עסקיות מודרניות, וגימטריה עברית היא כלי רוחני ומעשי לכך.</p>
+  <h2>מהי גימטריה ומדוע להשתמש בה לשם עסק?</h2>
+  <p>גימטריה היא שיטה עתיקה של חישוב ערכים מספריים של מילים עבריות. כל אות באלפבית העברי מייצגת מספר, והחיבור של הערכים מייצר את הגימטריה של המילה או השם.</p>
+  
+  <p>בהקשר עסקי, רבים מאמינים שבחירת שם בעל גימטריה חיובית יכולה:</p>
+  <ul>
+    <li>להעניק למיזם אנרגיה חיובית ומשמעות עמוקה יותר</li>
+    <li>ליצור קשר רוחני או תרבותי עם הקהל היעד</li>
+    <li>להוסיף שכבת משמעות נוספת למותג</li>
+    <li>לסייע למייסדים להרגיש ביטחון בבחירתם</li>
+  </ul>
 
-<p>גימטריה היא שיטה קבלית העוסקת בערכים המספריים של אותיות עבריות. כל אות בא-ב העברי מייצגת מספר ספציפי, ומחישוב סכום האותיות במילה או בשם ניתן לקבל תובנות על המשמעות הרוחנית והאנרגטית שלה.</p>
-
-<h2>איך עובד חישוב גימטריה לשם עסק?</h2>
-
-<p>חישוב גימטריה מבוסס על המרת כל אות בשם העסק לערך המספרי שלה בא-ב העברי. הנה טבלת הערכים המלאה:</p>
-
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>אות</th>
-<th>ערך</th>
-<th>אות</th>
-<th>ערך</th>
-<th>אות</th>
-<th>ערך</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>א</td><td>1</td>
-<td>י</td><td>10</td>
-<td>ק</td><td>100</td>
-</tr>
-<tr>
-<td>ב</td><td>2</td>
-<td>כ, ך</td><td>20</td>
-<td>ר</td><td>200</td>
-</tr>
-<tr>
-<td>ג</td><td>3</td>
-<td>ל</td><td>30</td>
-<td>ש</td><td>300</td>
-</tr>
-<tr>
-<td>ד</td><td>4</td>
-<td>מ, ם</td><td>40</td>
-<td>ת</td><td>400</td>
-</tr>
-<tr>
-<td>ה</td><td>5</td>
-<td>נ, ן</td><td>50</td>
-<td></td><td></td>
-</tr>
-<tr>
-<td
+  <h2>טבלת ערכי גימטריה של האותיות העבריות</h2>
+  <table>
+    <tr>
+      <th>אות</th>
+      <th>ערך</th>
+      <th>אות</th>
+      <th>ערך</th>
+      <th>אות</th>
+      <th>
