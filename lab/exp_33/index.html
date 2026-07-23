@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>גימטריה שם תינוק - מדריך בחירת שם לפי גימטריה עברית | סוד הגורלות</title>
-    <meta name="description" content="מדריך מקיף לבחירת שם תינוק לפי גימטריה עברית. גלו את המשמעות המספרית של שמות, התאמה משפחתית ועקרונות גימטריה מסורתיים לבחירת שם לתינוק.">
-    <meta name="keywords" content="גימטריה שם תינוק, בחירת שם לפי גימטריה, גימטריה עברית, שמות תינוקות, חישוב גימטריה">
+    <title>גימטריה שם תינוק - מדריך לבחירת שם לפי גימטריה | סוד הגורלות</title>
+    <meta name="description" content="מדריך מקיף לבחירת שם תינוק לפי גימטריה עברית. למדו כיצד לחשב ערך גימטרי של שמות, מה המשמעות המספרית והאם כדאי לבחור שם לפי גימטריה.">
+    <meta name="keywords" content="גימטריה שם תינוק, בחירת שם לפי גימטריה, חישוב גימטריה, שמות עבריים, כיצד לבחור שם לתינוק">
     <link rel="canonical" href="https://sod-hagoralot.com">
     <style>
         * {
@@ -14,48 +14,54 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background-color: #1a1a1a;
             color: #e0e0e0;
             line-height: 1.8;
             font-size: 18px;
-            padding: 20px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #242424;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            padding: 20px;
+        }
+        header {
+            padding: 40px 0 60px;
+            text-align: center;
         }
         h1 {
-            font-size: 2em;
-            color: #00AFA9;
-            margin-bottom: 30px;
-            line-height: 1.3;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
         h2 {
-            font-size: 1.5em;
+            font-size: 1.5rem;
             color: #00AFA9;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin: 50px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00AFA9;
         }
         h3 {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             color: #00AFA9;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            margin: 30px 0 15px;
         }
         p {
             margin-bottom: 20px;
         }
         ul, ol {
-            margin-right: 25px;
-            margin-bottom: 20px;
+            margin: 20px 0 20px 30px;
         }
         li {
             margin-bottom: 12px;
+        }
+        .intro {
+            background-color: #242424;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-right: 4px solid #00AFA9;
         }
         .cta-button {
             display: inline-block;
@@ -63,51 +69,80 @@
             color: #1a1a1a;
             padding: 18px 40px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: bold;
-            font-size: 1.1em;
-            margin: 30px 0;
+            font-size: 1.1rem;
+            margin: 40px 0;
             text-align: center;
             transition: background-color 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #00c9c1;
+            background-color: #00d9cc;
+        }
+        .cta-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .faq {
+            margin-top: 60px;
         }
         .faq-item {
-            background-color: #2a2a2a;
+            background-color: #242424;
             padding: 25px;
             margin-bottom: 20px;
-            border-right: 4px solid #00AFA9;
-            border-radius: 4px;
+            border-radius: 8px;
         }
         .faq-question {
             font-weight: bold;
             color: #00AFA9;
             margin-bottom: 12px;
-            font-size: 1.1em;
+            font-size: 1.1rem;
         }
-        .intro {
+        .faq-answer {
+            color: #e0e0e0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background-color: #242424;
+        }
+        th, td {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #00AFA9;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+        .note {
             background-color: #2a2a2a;
-            padding: 25px;
+            padding: 20px;
             border-radius: 6px;
-            margin-bottom: 30px;
+            margin: 25px 0;
+            border-right: 3px solid #00AFA9;
         }
-        strong {
-            color: #00AFA9;
+        footer {
+            margin-top: 80px;
+            padding: 30px 0;
+            text-align: center;
+            color: #888;
+            border-top: 1px solid #333;
         }
         @media (max-width: 600px) {
-            body {
-                padding: 10px;
-                font-size: 16px;
-            }
-            .container {
-                padding: 20px;
-            }
             h1 {
-                font-size: 1.6em;
+                font-size: 1.6rem;
             }
             h2 {
-                font-size: 1.3em;
+                font-size: 1.3rem;
+            }
+            .container {
+                padding: 15px;
+            }
+            .intro {
+                padding: 20px;
             }
         }
     </style>
@@ -121,23 +156,23 @@
                 "name": "איך מחשבים גימטריה של שם?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "חישוב גימטריה של שם נעשה על ידי הקצאת ערך מספרי לכל אות בשם והוספת הערכים יחד. בגימטריה המסורתית: א=1, ב=2, ג=3, ד=4, ה=5, ו=6, ז=7, ח=8, ט=9, י=10, כ=20, ל=30, מ=40, נ=50, ס=60, ע=70, פ=80, צ=90, ק=100, ר=200, ש=300, ת=400. אותיות סופיות (ך, ם, ן, ף, ץ) יכולות לקבל ערכים שונים בהתאם למסורת."
+                    "text": "חישוב גימטריה של שם נעשה על ידי חיבור הערכים המספריים של כל אות בשם. לדוגמה: אליה = א(1) + ל(30) + י(10) + ה(5) = 46. כל אות בעברית מקבלת ערך מספרי קבוע: א=1, ב=2, ג=3 וכן הלאה. אותיות כ, מ, נ, פ, צ מקבלות ערכים שונים בסופית (500, 600, 700, 800, 900)."
                 }
             },
             {
                 "@type": "Question",
-                "name": "האם יש משמעות לגימטריה זהה לשם ילד ושם הורה?",
+                "name": "האם כדאי לבחור שם לתינוק לפי גימטריה?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "במסורת היהודית, גימטריה זהה בין שם הילד לשם של הורה או קרוב משפחה נחשבת לסימן חיובי. זה עשוי לרמז על קשר רוחני או העברת תכונות. חלק מההורים מחפשים גימטריה זהה לשם של אדם צדיק במשפחה או לשם שיש לו משמעות מיוחדת. עם זאת, זו אמונה ולא כלל מחייב - הבחירה תמיד צריכה להיות מונעת משיקולים משפחתיים ואישיים."
+                    "text": "בחירת שם לפי גימטריה היא שיקול אחד מתוך רבים. הורים רבים בוחנים את המשמעות הגימטרית כמקור להשראה נוסף, אך מומלץ להתחשב גם במשמעות הלשונית, בהיסטוריה המשפחתית, בצליל השם ובתחושה האישית. גימטריה יכולה להעשיר את תהליך הבחירה, אך לא צריכה להיות השיקול היחיד."
                 }
             },
             {
                 "@type": "Question",
-                "name": "מהם המספרים המועדפים בגימטריה לשם תינוק?",
+                "name": "מה המספרים המיוחדים בגימטריה לשם תינוק?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "מספרים שנחשבים חיוביים בגימטריה כוללים: 18 (חי - חיים), 26 (שם ה'), 36 (צדיק לפי המסורת של 36 צדיקים), 72 (שם בן 72 אותיות), 120 (שנות חיים), 180 (פי שניים מחי). רבים מחפשים שמות שגימטריה שלהם תואמת למילים חיוביות כמו 'אהבה' (13), 'ברכה' (227), או 'שלום' (376). עם זאת, אין מספר 'רע' - העיקר הוא המשמעות האישית שההורים נותנים לשם."
+                    "text": "מספרים הנחשבים מיוחדים בגימטריה כוללים: 18 (חי - חיים), 26 (שם הוי\"ה), 72 (חסד), 613 (תרי\"ג מצוות), ו-248 (אברהם). מספרים אלו נושאים משמעות רוחנית ומסורתית עמוקה במסורת היהודית. הורים רבים מחפשים שמות שערכם הגימטרי תואם למספרים אלו או לפסוקים בעלי משמעות אישית."
                 }
             }
         ]
@@ -147,11 +182,20 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "גימטריה שם תינוק - מדריך בחירת שם לפי גימטריה עברית",
-        "description": "מדריך מקיף לבחירת שם תינוק לפי גימטריה עברית, כולל עקרונות חישוב, משמעויות מספרים והתאמה משפחתית",
+        "headline": "גימטריה שם תינוק - מדריך לבחירת שם לפי גימטריה",
+        "description": "מדריך מקיף לבחירת שם תינוק לפי גימטריה עברית. למדו כיצד לחשב ערך גימטרי של שמות ומה המשמעות המספרית.",
+        "image": "https://sod-hagoralot.com/logo.png",
         "author": {
             "@type": "Organization",
             "name": "סוד הגורלות"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "סוד הגורלות",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sod-hagoralot.com/logo.png"
+            }
         },
         "datePublished": "2024-01-15",
         "dateModified": "2024-01-15"
@@ -160,21 +204,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>איך בוחרים שם לתינוק לפי גימטריה עברית?</h1>
-        
+        <header>
+            <h1>איך לבחור שם לתינוק לפי גימטריה?</h1>
+        </header>
+
         <div class="intro">
-            <p>בחירת שם לתינוק היא אחת ההחלטות המשמעותיות ביותר עבור הורים. רבים בוחרים להתייעץ עם גימטריה עברית - השיטה המסורתית של הקצאת ערכים מספריים לאותיות עבריות - כדי למצוא שם בעל משמעות רוחנית עמוקה יותר.</p>
+            <p><strong>גימטריה היא שיטה עתיקה למציאת משמעות נסתרת במילים עבריות על ידי הקצאת ערך מספרי לכל אות.</strong> הורים רבים בישראל משתמשים בגימטריה ככלי נוסף בתהליך בחירת שם התינוק, לצד שיקולים של משמעות, היסטוריה משפחתית וצליל השם.</p>
+            <p>מדריך זה יסביר כיצד לחשב גימטריה של שמות, מהן המשמעויות המספריות החשובות, ואיך ניתן לשלב את השיטה בתהליך בחירת השם.</p>
         </div>
 
-        <h2>מהי גימטריה ומדוע משתמשים בה לבחירת שם?</h2>
-        <p>גימטריה היא שיטה עתיקה בקבלה היהודית שבה כל אות עברית מקבלת ערך מספרי. השימוש בגימטריה לבחירת שם תינוק נובע מהאמונה שהשם משפיע על נשמת האדם ועל גורלו.</p>
-        
-        <p>במסורת היהודית, השם שאדם נושא אינו רק תווית זיהוי אלא ביטוי של מהותו הפנימית. הורים רבים מחפשים שם שהגימטריה שלו תתאים למילים חיוביות, לשמות של קרובי משפחה, או למספרים בעלי משמעות רוחנית.</p>
+        <h2>מהי גימטריה ואיך היא עובדת?</h2>
+        <p>גימטריה (גם: גמטריא) היא שיטה של פרשנות טקסט עברי המבוססת על הערכים המספריים של האותיות. כל אות באלפבית העברי מייצגת מספר מסוים, וחיבור הערכים של כל אותיות המילה מעניק לה "ערך גימטרי".</p>
 
-        <h2>עקרונות בסיסיים לחישוב גימטריה של שם</h2>
-        <p>הערכים המספריים הבסיסיים של האותיות העבריות הם:</p>
-        <ul>
-            <li>א-ט: 1-9 (א=1, ב=2, ג=3, וכן הלאה)</li>
-            <li>י-צ: 10-90 (י=10, כ=20, ל=30, וכן הלאה)</li>
-            <li>ק-ת: 100-400 (ק=100, ר=200, ש=300, ת=400)</li>
-            <li>אותיות סופיות (ך, ם, ן, ף, ץ) - יש גישות שונות לגביהן במסורות שונות
+        <h3>טבלת ערכי אותיות לפי גימטריה</h3>

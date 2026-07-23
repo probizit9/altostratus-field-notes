@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>פתרון חלומות לפי מספרים - משמעות מספרים בחלומות עבריים</title>
-<meta name="description" content="חלמתם על מספר ורוצים לדעת מה המשמעות? גלו את פתרון החלומות לפי מספרים בגימטריה עברית ונומרולוגיה קדומה. מדריך מלא למספרים בחלום.">
+<title>פתרון חלומות לפי מספרים - מדריך מקיף לפענוח משמעות מספרים בחלום</title>
+<meta name="description" content="חלמתם על מספר מסוים? גלו את המשמעות העמוקה של מספרים בחלומות לפי המסורת העברית והנומרולוגיה. מדריך מקצועי לפתרון חלומות לפי מספרים.">
 <style>
 * {
   margin: 0;
@@ -12,107 +12,93 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif;
+  background: #1a1a1a;
   color: #e0e0e0;
-  line-height: 1.8;
+  line-height: 1.7;
   padding: 20px;
 }
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
 }
 h1 {
   font-size: 2rem;
   color: #ffffff;
-  margin-bottom: 30px;
-  line-height: 1.4;
+  margin: 40px 0 30px;
+  line-height: 1.3;
 }
 h2 {
   font-size: 1.5rem;
   color: #00AFA9;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin: 40px 0 20px;
+  line-height: 1.4;
 }
 h3 {
   font-size: 1.2rem;
-  color: #00AFA9;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  color: #ffffff;
+  margin: 30px 0 15px;
 }
 p {
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 ul, ol {
-  margin-right: 25px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 30px;
 }
 li {
   margin-bottom: 12px;
-  font-size: 1.05rem;
+}
+.intro {
+  background: #252525;
+  padding: 25px;
+  border-right: 4px solid #00AFA9;
+  margin: 30px 0;
+  border-radius: 4px;
+}
+.number-section {
+  background: #222;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 6px;
 }
 .cta-button {
   display: inline-block;
-  background-color: #00AFA9;
+  background: #00AFA9;
   color: #ffffff;
-  padding: 18px 40px;
+  padding: 16px 40px;
   text-decoration: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin: 30px 0;
   text-align: center;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 .cta-button:hover {
-  background-color: #008c84;
+  background: #008c82;
+}
+.cta-section {
+  text-align: center;
+  background: #252525;
+  padding: 40px 25px;
+  margin: 50px 0;
+  border-radius: 8px;
 }
 .faq-item {
-  background-color: #242424;
+  background: #252525;
   padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border-right: 4px solid #00AFA9;
+  margin: 20px 0;
+  border-radius: 6px;
 }
 .faq-question {
-  font-weight: bold;
-  color: #00AFA9;
-  margin-bottom: 12px;
   font-size: 1.15rem;
+  color: #00AFA9;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 .faq-answer {
-  color: #d0d0d0;
-  font-size: 1.05rem;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 25px 0;
-  background-color: #242424;
-  border-radius: 8px;
-  overflow: hidden;
-}
-th, td {
-  padding: 15px;
-  text-align: right;
-  border-bottom: 1px solid #333;
-}
-th {
-  background-color: #00AFA9;
-  color: #ffffff;
-  font-weight: bold;
-}
-tr:last-child td {
-  border-bottom: none;
-}
-.highlight {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-right: 4px solid #00AFA9;
-  margin: 25px 0;
-  border-radius: 6px;
+  color: #e0e0e0;
 }
 @media (max-width: 600px) {
   h1 {
@@ -121,11 +107,11 @@ tr:last-child td {
   h2 {
     font-size: 1.3rem;
   }
-  .container {
-    padding: 10px;
-  }
   body {
-    padding: 10px;
+    padding: 15px;
+  }
+  .intro, .number-section, .faq-item {
+    padding: 18px;
   }
 }
 </style>
@@ -139,23 +125,23 @@ tr:last-child td {
       "name": "מה המשמעות של מספר 7 בחלום?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "מספר 7 בחלום מסמל שלמות רוחנית, מחזוריות קדושה (שבעת ימי השבוע, שנת השמיטה), וחיבור לממד הרוחני. בגימטריה, 7 קשור למילה 'זין' שפירושה כלי וזרע - סימן להתחדשות. חלום על 7 יכול להצביע על צורך במנוחה רוחנית או השלמת מחזור חשוב בחיים."
+        "text": "מספר 7 בחלום מסמל שלמות רוחנית, חכמה פנימית וחיפוש אחר אמת. במסורת העברית, השביעי מקודש - שבת היא היום השביעי, שנת השמיטה היא השנה השביעית. כאשר אתם חולמים על מספר 7, זה עשוי להצביע על תקופה של התבוננות פנימית, צורך בהתחברות רוחנית או סימן שאתם בדרך הנכונה. המספר יכול גם להצביע על השלמת מחזור חשוב בחייכם."
       }
     },
     {
       "@type": "Question",
-      "name": "איך מפענחים חלום עם מספרים לפי גימטריה?",
+      "name": "איך פותרים חלום עם מספרים לפי המסורת העברית?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "פענוח חלומות לפי גימטריה כולל: 1) זיהוי המספר המדויק שהופיע בחלום, 2) חיפוש מילים עבריות בעלות אותו ערך גימטרי, 3) בחינת הקשר המילים למצב החיים שלך, 4) התבוננות בסמלים נוספים בחלום. לדוגמה, מספר 18 (חי) מסמל חיים ומזל, ואילו 26 שווה לשם הוי"ה ומסמל נוכחות אלוהית."
+        "text": "פתרון חלומות לפי מספרים במסורת העברית משלב כמה גישות: גימטריה (ערך מספרי של אותיות עבריות), משמעות סמלית מהתנך (כמו 40 ימי המבול, 12 השבטים), והקשר אישי של החולם. חשוב לשאול: האם המספר חזר על עצמו? באיזה הקשר הוא הופיע? מה הרגשתם כשראיתם אותו? הפענוח המדויק דורש התחשבות במצבכם האישי, השאלות שמעסיקות אתכם, והסימבוליקה התרבותית-רוחנית של המספר."
       }
     },
     {
       "@type": "Question",
-      "name": "למה אנשים חולמים על מספרים ספציפיים?",
+      "name": "האם יש משמעות למספרים חוזרים בחלומות?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "חלומות על מספרים יכולים להיות תוצאה של: התת-מודע מעבד מידע מספרי מהיום (טלפונים, תאריכים, מחירים), המוח מנסה למסור מסר סמלי דרך שפת המספרים, חיבור לזיכרונות רגשיים הקשורים למספרים מסוימים, או לפי המסורת העברית - מסר רוחני מהנשמה. במסורת היהודית, מספרים נחשבים לשפה של הבריאה עצמה."
+        "text": "כן, מספרים חוזרים בחלומות נחשבים למשמעותיים במיוחד. כאשר מספר מסוים מופיע שוב ושוב בחלומות שלכם, זה מצביע על מסר חשוב שהתת-מודע מנסה להעביר. המספר החוזר עשוי להיות קשור למצב בחייכם שדורש תשומת לב, לתאריך משמעותי, או לתובנה רוחנית שצריכה להגיע להכרה. במסורת העברית, חזרה מחזקת את חשיבות המסר - כמו חלומות פרעה שחזרו פעמיים."
       }
     }
   ]
@@ -165,72 +151,40 @@ tr:last-child td {
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "פתרון חלומות לפי מספרים - משמעות מספרים בחלומות עבריים",
-  "description": "מדריך מקיף לפענוח משמעות מספרים בחלומות לפי גימטריה ונומרולוגיה עברית קדומה",
+  "headline": "פתרון חלומות לפי מספרים - מדריך מקיף לפענוח משמעות מספרים בחלום",
+  "description": "מדריך מקצועי לפתרון חלומות לפי מספרים במסורת העברית והנומרולוגיה, כולל משמעות מספרים ספציפיים והקשרם התנכי",
+  "inLanguage": "he",
   "author": {
     "@type": "Organization",
     "name": "סוד הגורלות"
   },
-  "datePublished": "2025-01-20",
-  "dateModified": "2025-01-20",
-  "inLanguage": "he"
+  "datePublished": "2024-01-15",
+  "dateModified": "2024-01-15"
 }
 </script>
 </head>
 <body>
 <div class="container">
-<h1>חלמתי על מספר - מה המשמעות ואיך מפענחים לפי גימטריה?</h1>
+  <h1>חלמתי על מספר - מה המשמעות ואיך פותרים חלום לפי מספרים?</h1>
+  
+  <div class="intro">
+    <p><strong>חלומות עם מספרים הם מהחוויות המרתקות והמסקרנות ביותר.</strong> כאשר אתם מתעוררים מחלום שבו מספר מסוים בלט - בין אם ראיתם אותו כתוב, שמעתם אותו, או פשוט "ידעתם" אותו - יש סיבה טובה לתת לכך את תשומת הלב. במסורת העברית, מספרים אינם רק כמויות מתמטיות אלא נושאים משמעות רוחנית עמוקה.</p>
+  </div>
 
-<p>חלום עם מספר ספציפי אינו מקרי. במסורת העברית, מספרים הם שפת היקום - כל מספר נושא משמעות עמוקה המקושרת לגימטריה (הערך המספרי של מילים עבריות) ולנומרולוגיה קדומה. כשמספר מופיע בחלום שלך, זהו מסר מהתת-מודע או מהנשמה שדורש פענוח.</p>
+  <h2>מספרים בחלום משמעות - היסוד התיאורטי</h2>
+  
+  <p>פתרון חלומות לפי מספרים משלב בין שלושה תחומי ידע עתיקים:</p>
+  
+  <ul>
+    <li><strong>גימטריה:</strong> המערכת העברית שבה לכל אות יש ערך מספרי, ומילים בעלות אותו ערך מספרי קשורות זו לזו ברמה עמוקה יותר</li>
+    <li><strong>סימבוליקה תנכית:</strong> מספרים רבים מופיעים במקרא בהקשרים משמעותיים - 40 יום ולילה, 12 שבטים, 7 ימי בראשית, 10 דיברות</li>
+    <li><strong>נומרולוגיה יהודית:</strong> המסורת שרואה במספרים מפתחות לסודות הנפש והגורל האישי</li>
+  </ul>
 
-<div class="highlight">
-<p><strong>עיקרון מרכזי:</strong> כל אות עברית נושאת ערך מספרי. כשמספר מופיע בחלום, אנו בוחנים אילו מילים עבריות שוות לו בגימטריה - המילים האלו מגלות את המשמעות הסמויה של החלום.</p>
-</div>
+  <p>כאשר מספר מופיע בחלום, הוא מתפקד כמסר מקודד מהתת-מודע או מהממד הרוחני. הפענוח שלו תלוי בהקשר האישי של החולם, במצבו הנפשי ובמשמעות התרבותית-רוחנית של המספר עצמו.</p>
 
-<h2>משמעות המספרים הנפוצים בחלומות</h2>
+  <h2>המשמעות של מספרים נפוצים בחלומות</h2>
 
-<table>
-<tr>
-<th>מספר</th>
-<th>משמעות בסיסית</th>
-<th>קשר גימטרי</th>
-</tr>
-<tr>
-<td>1</td>
-<td>אחדות, התחלה, יחידות</td>
-<td>אלף (א') - התחלה, אלוהות</td>
-</tr>
-<tr>
-<td>3</td>
-<td>יציבות, משולש, שלמות</td>
-<td>אבות, ג' קווים (שלמות גאומטרית)</td>
-</tr>
-<tr>
-<td>7</td>
-<td>קדושה, מחזוריות</td>
-<td>שבוע, שמיטה, מנורה</td>
-</tr>
-<tr>
-<td>10</td>
-<td>שלמות, עשרת הדברות</td>
-<td>יוד (י') - נקודת יצירה</td>
-</tr>
-<tr>
-<td>18</td>
-<td>חיים, חי</td>
-<td>חי (ח+י=18) - חיים ומזל</td>
-</tr>
-<tr>
-<td>26</td>
-<td>שם הוי"ה</td>
-<td>י-ה-ו-ה (10+5+6+5) - שם האלוהים</td>
-</tr>
-<tr>
-<td>40</td>
-<td>טרנספורמציה, טיהור</td>
-<td>40 יום מבול, 40 שנה במדבר</td>
-</tr>
-<tr>
-<td>100</td>
-<td>שפע, מלאות</td>
-<td>קוף (ק
+  <div class="number-section">
+    <h3>מספר 1 - אחדות ותחילה</h3>
+    <p>מסמל התחלה חדשה, אחדות, ייחוד הבורא. חלום על מספר

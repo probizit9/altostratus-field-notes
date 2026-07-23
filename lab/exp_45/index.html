@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מחשבון גימטריה עברית למספרים של מלאכים וחישוב שנה אישית 2025</title>
-    <meta name="description" content="חשב את השנה האישית שלך ל-2025 וגלה את המשמעות של מספרים של מלאכים בגימטריה עברית. מדריך מלא למשמעות מספרים בעברית, חישובי נומרולוגיה ואותיות עבריות.">
+    <title>חישוב שנה אישית נומרולוגיה 2025 - מספרים של מלאכים בעברית | גימטריה</title>
+    <meta name="description" content="מחשבון חינמי לחישוב שנה אישית 2025 בנומרולוגיה, משמעות מספרים של מלאכים בעברית, ושיוך אותיות עבריות לפי גימטריה. גלה את המספר האישי שלך והמשמעות הרוחנית שלו.">
     <style>
         * {
             margin: 0;
@@ -12,10 +12,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background-color: #0a0a0a;
             color: #e0e0e0;
-            line-height: 1.7;
+            line-height: 1.8;
             padding: 20px;
         }
         .container {
@@ -26,29 +26,31 @@
         h1 {
             font-size: 2rem;
             color: #ffffff;
-            margin: 40px 0 30px 0;
-            line-height: 1.3;
+            margin-bottom: 30px;
+            line-height: 1.4;
         }
         h2 {
             font-size: 1.5rem;
             color: #00AFA9;
-            margin: 40px 0 20px 0;
+            margin-top: 50px;
+            margin-bottom: 20px;
         }
         h3 {
             font-size: 1.2rem;
-            color: #ffffff;
-            margin: 25px 0 15px 0;
+            color: #00AFA9;
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
         p {
             margin-bottom: 20px;
             font-size: 1.05rem;
         }
-        .calculator-box {
+        .calculator {
             background-color: #1a1a1a;
             border: 2px solid #00AFA9;
             border-radius: 12px;
             padding: 30px;
-            margin: 30px 0;
+            margin: 40px 0;
         }
         .input-group {
             margin-bottom: 20px;
@@ -65,87 +67,86 @@
             background-color: #0a0a0a;
             border: 1px solid #333;
             border-radius: 6px;
-            color: #ffffff;
+            color: #e0e0e0;
             font-size: 1rem;
         }
         button {
-            background-color: #00AFA9;
-            color: #ffffff;
-            border: none;
-            padding: 14px 30px;
-            font-size: 1.1rem;
-            border-radius: 6px;
-            cursor: pointer;
             width: 100%;
+            padding: 15px;
+            background-color: #00AFA9;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
             margin-top: 10px;
-            font-weight: 600;
         }
         button:hover {
-            background-color: #008c82;
+            background-color: #00c9c0;
         }
         .result {
-            margin-top: 25px;
-            padding: 20px;
+            margin-top: 30px;
+            padding: 25px;
             background-color: #0a0a0a;
             border-radius: 8px;
-            border-right: 4px solid #00AFA9;
+            display: none;
         }
-        .cta-button {
+        .result.show {
             display: block;
-            background-color: #00AFA9;
-            color: #ffffff;
-            text-align: center;
-            padding: 18px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin: 40px 0;
-            transition: background-color 0.3s;
         }
-        .cta-button:hover {
-            background-color: #008c82;
+        .result-number {
+            font-size: 3rem;
+            color: #00AFA9;
+            text-align: center;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background-color: #1a1a1a;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #333;
+            text-align: right;
+        }
+        th {
+            background-color: #00AFA9;
+            color: #0a0a0a;
+            font-weight: 700;
         }
         .faq {
             margin-top: 50px;
         }
         .faq-item {
             background-color: #1a1a1a;
+            border-radius: 8px;
             padding: 25px;
             margin-bottom: 20px;
-            border-radius: 8px;
-            border-right: 3px solid #00AFA9;
         }
         .faq-question {
-            font-weight: 600;
+            font-size: 1.15rem;
             color: #00AFA9;
+            font-weight: 600;
             margin-bottom: 12px;
-            font-size: 1.1rem;
         }
-        .faq-answer {
-            color: #e0e0e0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background-color: #1a1a1a;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 15px;
-            text-align: right;
-            border-bottom: 1px solid #333;
-        }
-        th {
+        .cta-button {
+            display: block;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px 40px;
             background-color: #00AFA9;
-            color: #ffffff;
-            font-weight: 600;
+            color: #0a0a0a;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
-        .highlight {
-            color: #00AFA9;
-            font-weight: 600;
+        .cta-button:hover {
+            background-color: #00c9c0;
         }
         ul, ol {
             margin: 20px 0 20px 30px;
@@ -155,29 +156,28 @@
         }
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
             h2 {
                 font-size: 1.3rem;
             }
-            .container {
-                padding: 10px;
-            }
-            .calculator-box {
+            .calculator {
                 padding: 20px;
+            }
+            .result-number {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>איך מחשבים את השנה האישית בנומרולוגיה ומה המשמעות של מספרים של מלאכים בגימטריה עברית?</h1>
+        <h1>איך מחשבים שנה אישית בנומרולוגיה ומה המשמעות שלה בגימטריה עברית?</h1>
         
-        <p>חישוב השנה האישית בנומרולוגיה הוא כלי רב עוצמה להבנת האנרגיות והמגמות המצפות לך בשנה הקרובה. כאשר משלבים את החכמה הנומרולוגית המערבית עם הגימטריה העברית, מתקבל מימד עמוק יותר של משמעות רוחנית המקושרת לאותיות הקודש ולמספרים של מלאכים.</p>
+        <p>נומרולוגיה היא מערכת עתיקה המייחסת משמעות רוחנית למספרים. השנה האישית היא מספר המייצג את האנרגיה והנושאים המרכזיים שילוו אותך במהלך שנה קלנדרית מסוימת. חישוב השנה האישית לשנת 2025 מבוסס על תאריך הלידה שלך והשנה הנוכחית.</p>
 
-        <h2>מחשבון שנה אישית ל-2025</h2>
-        
-        <div class="calculator-box">
+        <div class="calculator">
+            <h3>מחשבון שנה אישית 2025</h3>
             <div class="input-group">
                 <label for="day">יום לידה (1-31):</label>
                 <input type="number" id="day" min="1" max="31" placeholder="למשל: 15">
@@ -186,71 +186,75 @@
                 <label for="month">חודש לידה (1-12):</label>
                 <input type="number" id="month" min="1" max="12" placeholder="למשל: 7">
             </div>
-            <button onclick="calculatePersonalYear()">חשב את השנה האישית שלי ל-2025</button>
-            <div id="result" class="result" style="display:none;">
-                <h3>התוצאה שלך:</h3>
-                <p id="resultText"></p>
+            <button onclick="calculatePersonalYear()">חשב את השנה האישית שלי</button>
+            
+            <div class="result" id="result">
+                <h3>השנה האישית שלך ל-2025:</h3>
+                <div class="result-number" id="resultNumber"></div>
+                <p id="resultMeaning"></p>
                 <p id="hebrewLetter"></p>
-                <p id="meaning"></p>
             </div>
         </div>
 
-        <h2>איך עובד חישוב השנה האישית?</h2>
-        
-        <p>חישוב השנה האישית בנומרולוגיה מתבצע על ידי חיבור יום הלידה, חודש הלידה והשנה הנוכחית (2025), ואז צמצום התוצאה למספר בודד בין 1 ל-9. הנוסחה:</p>
-        
-        <p><strong>יום + חודש + 2 + 0 + 2 + 5 = סכום → צמצום למספר בודד</strong></p>
-        
-        <p>לדוגמה: אדם שנולד ב-15 ביולי:<br>
-        1 + 5 + 7 + 2 + 0 + 2 + 5 = 22 → 2 + 2 = <span class="highlight">4</span></p>
-        
-        <p>השנה האישית 4 תהיה השנה שלו ל-2025, והיא מתאימה לאות העברית <span class="highlight">דלת (ד)</span> בגימטריה.</p>
+        <h2>שיטת החישוב</h2>
+        <p>כדי לחשב את השנה האישית שלך ל-2025:</p>
+        <ol>
+            <li>קח את יום הלידה שלך (למשל: 15)</li>
+            <li>הוסף את חודש הלידה שלך (למשל: 7 ליולי)</li>
+            <li>הוסף את ספרות השנה הנוכחית: 2+0+2+5 = 9</li>
+            <li>חבר את כל המספרים: 15+7+9 = 31</li>
+            <li>צמצם לספרה אחת: 3+1 = 4</li>
+            <li>השנה האישית שלך היא 4</li>
+        </ol>
+        <p><strong>הערה:</strong> במקרה של מספרי אדון (11, 22, 33) לא מצמצמים אותם.</p>
 
-        <h2>משמעות מספרים של מלאכים בגימטריה עברית</h2>
-        
-        <p>מספרים של מלאכים הם רצפים מספריים חוזרים שאנשים רואים בחיי היום-יום (111, 222, 333 וכו'). בגישה העברית, כל מספר מתקשר לאות בעלת משמעות רוחנית עמוקה:</p>
+        <h2>משמעות מספרים של מלאכים בעברית</h2>
+        <p>מספרים של מלאכים הם רצפים חוזרים של מספרים שרבים מאמינים שהם מסרים מהממד הרוחני. בעברית, לכל מספר יש קשר לאותיות העבריות דרך הגימטריה - המערכת המסורתית של ייחוס ערכים מספריים לאותיות.</p>
 
         <table>
             <thead>
                 <tr>
                     <th>מספר</th>
                     <th>אות עברית</th>
-                    <th>ערך גימטרי</th>
-                    <th>משמעות מרכזית</th>
+                    <th>משמעות בסיסית</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>אלף (א)</td>
-                    <td>1</td>
-                    <td>התחלה חדשה, אחדות, כוח אלוהי</td>
+                    <td>א (אלף)</td>
+                    <td>התחלות חדשות, מנהיגות, עצמאות</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>בית (ב)</td>
-                    <td>2</td>
-                    <td>בית, דואליות, שותפות</td>
+                    <td>ב (בית)</td>
+                    <td>שותפות, איזון, דואליות</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>גימל (ג)</td>
-                    <td>3</td>
-                    <td>צמיחה, יצירתיות, שלמות</td>
+                    <td>ג (גימל)</td>
+                    <td>יצירתיות, ביטוי עצמי, תקשורת</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>דלת (ד)</td>
-                    <td>4</td>
-                    <td>דלת, יציבות, מבנה</td>
+                    <td>ד (דלת)</td>
+                    <td>יציבות, בנייה, עבודה קשה</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>הא (ה)</td>
-                    <td>5</td>
-                    <td>גילוי אלוהי, שינוי, חופש</td>
+                    <td>ה (הא)</td>
+                    <td>שינוי, חופש, הרפתקאות</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td>וו (ו)</td>
-                    <td>
+                    <td>ו (וו)</td>
+                    <td>אחריות, משפחה, אהבה</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>ז (זיין)</td>
+                    <td>רוחניות, הכרה פנימית, חכמה</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>ח (ח
